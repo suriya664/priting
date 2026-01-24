@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing Services | 3D Print Pro</title>
+    <meta name="description" content="Professional 3D printing services including FDM, SLA, SLS, and metal printing. Fast turnaround, multiple materials, and competitive pricing.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body class="bg-white text-gray-900 transition-colors duration-300">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 transition-colors duration-300">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2 group">
+                    <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
+                        <i class="fas fa-cube text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent">3D Print Pro</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home</a>
+                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home 2</a>
+                    <a href="services.html" class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Services</a>
+                    <a href="materials.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
+                    <a href="gallery.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Gallery</a>
+                    <a href="pricing.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
+                    <a href="contact.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
+                </div>
+                
+                <!-- Right Side Actions -->
+                <div class="flex items-center space-x-4">
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-moon text-gray-600"></i>
+                    </button>
+                    
+                    <!-- Auth Links -->
+                    <div class="hidden md:flex items-center space-x-3">
+                        <a href="register.html" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">Sign Up</a>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <a href="dashboard.html" class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all">
+                        <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
+                    </a>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-lg hover:bg-gray-100">
+                        <i class="fas fa-bars text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-3 mt-4">
+                    <a href="index.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home</a>
+                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home 2</a>
+                    <a href="services.html" class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Services</a>
+                    <a href="materials.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
+                    <a href="gallery.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Gallery</a>
+                    <a href="pricing.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
+                    <a href="contact.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
+                    <div class="flex items-center space-x-3 pt-3 border-t border-gray-200">
+                        <a href="register.html" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="py-20 bg-gradient-to-br from-orange-50 via-white to-cyan-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h1 class="text-5xl lg:text-6xl font-bold font-['Rajdhani'] mb-6">
+                        Our <span class="bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent">3D Printing</span> Services
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Cutting-edge 3D printing technologies to bring your ideas to life. 
+                        From rapid prototyping to production parts, we have the perfect solution for your needs.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="dashboard.html" class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
+                            <i class="fas fa-rocket mr-2"></i>Start Your Project
+                        </a>
+                        <a href="#technologies" class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-orange-600 hover:text-orange-600 transition-all">
+                            <i class="fas fa-cogs mr-2"></i>Explore Technologies
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <section id="technologies" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold font-['Rajdhani'] mb-4">Advanced Printing Technologies</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        We utilize the latest 3D printing technologies to ensure the highest quality 
+                        and precision for your projects.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- FDM Technology -->
+                    <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-cube text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold font-['Rajdhani']">FDM</h3>
+                                <p class="text-gray-600">Fused Deposition Modeling</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Fast & Affordable</h4>
+                                    <p class="text-gray-600 text-sm">Quick turnaround times with cost-effective production</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Wide Material Range</h4>
+                                    <p class="text-gray-600 text-sm">PLA, ABS, PETG, Nylon, and more</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Large Build Volume</h4>
+                                    <p class="text-gray-600 text-sm">Parts up to 300x300x400mm</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-blue-200 pt-4">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm text-gray-600">Layer Resolution</span>
+                                <span class="font-semibold">0.1 - 0.3mm</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm text-gray-600">Accuracy</span>
+                                <span class="font-semibold">±0.2mm</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Best For</span>
+                                <span class="font-semibold text-blue-600">Prototypes, Functional Parts</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- SLA Technology -->
+                    <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-droplet text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold font-['Rajdhani']">SLA</h3>
+                                <p class="text-gray-600">Stereolithography</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">High Detail</h4>
+                                    <p class="text-gray-600 text-sm">Exceptional surface finish and fine details</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Smooth Surfaces</h4>
+                                    <p class="text-gray-600 text-sm">No visible layer lines</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Material Versatility</h4>
+                                    <p class="text-gray-600 text-sm">Standard, tough, flexible, and castable resins</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-purple-200 pt-4">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm text-gray-600">Layer Resolution</span>
+                                <span class="font-semibold">0.025 - 0.1mm</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm text-gray-600">Accuracy</span>
+                                <span class="font-semibold">±0.1mm</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Best For</span>
+                                <span class="font-semibold text-purple-600">Jewelry, Dental, Detailed Models</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- SLS Technology -->
+                    <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-layer-group text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold font-['Rajdhani']">SLS</h3>
+                                <p class="text-gray-600">Selective Laser Sintering</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Strong Parts</h4>
+                                    <p class="text-gray-600 text-sm">Durable nylon parts with excellent mechanical properties</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">No Support Required</h4>
+                                    <p class="text-gray-600 text-sm">Complex geometries without support structures</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Batch Production</h4>
+                                    <p class="text-gray-600 text-sm">Cost-effective for multiple parts</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-green-200 pt-4">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm text-gray-600">Layer Resolution</span>
+                                <span class="font-semibold">0.1 - 0.15mm</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm text-gray-600">Accuracy</span>
+                                <span class="font-semibold">±0.3mm</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Best For</span>
+                                <span class="font-semibold text-green-600">Functional Parts, End-Use Products</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Metal Printing -->
+                    <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gray-700 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-industry text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold font-['Rajdhani']">Metal Printing</h3>
+                                <p class="text-gray-600">Direct Metal Laser Sintering</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-gray-700 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Metal Strength</h4>
+                                    <p class="text-gray-600 text-sm">Real metal parts with mechanical properties</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-gray-700 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Complex Geometries</h4>
+                                    <p class="text-gray-600 text-sm">Internal channels and lattice structures</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-gray-700 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Material Options</h4>
+                                    <p class="text-gray-600 text-sm">Stainless steel, aluminum, titanium, cobalt chrome</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-gray-200 pt-4">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm text-gray-600">Layer Resolution</span>
+                                <span class="font-semibold">0.02 - 0.1mm</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm text-gray-600">Accuracy</span>
+                                <span class="font-semibold">±0.1mm</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Best For</span>
+                                <span class="font-semibold text-gray-700">Aerospace, Medical, Industrial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold font-['Rajdhani'] mb-4">Technology Comparison</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Choose the right technology for your project based on your requirements
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white">
+                                <tr>
+                                    <th class="px-6 py-4 text-left font-semibold">Feature</th>
+                                    <th class="px-6 py-4 text-center font-semibold">FDM</th>
+                                    <th class="px-6 py-4 text-center font-semibold">SLA</th>
+                                    <th class="px-6 py-4 text-center font-semibold">SLS</th>
+                                    <th class="px-6 py-4 text-center font-semibold">Metal</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 font-medium">Speed</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-green-500"></i> Fast</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-yellow-500"></i> Medium</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-check-circle text-yellow-500"></i> Medium</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-times-circle text-red-500"></i> Slow</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 font-medium">Cost</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-dollar-sign text-green-500"></i> Low</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-dollar-sign text-yellow-500"></i> Medium</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-dollar-sign text-yellow-500"></i> Medium</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-dollar-sign text-red-500"></i> High</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 font-medium">Detail</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-star text-yellow-500"></i> Good</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-star text-green-500"></i> Excellent</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-star text-yellow-500"></i> Good</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-star text-green-500"></i> Excellent</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 font-medium">Strength</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-star text-yellow-500"></i> Good</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-star text-yellow-500"></i> Fair</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-star text-green-500"></i> Excellent</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-star text-green-500"></i> Excellent</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 font-medium">Build Size</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-expand text-green-500"></i> Large</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-expand text-yellow-500"></i> Medium</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-expand text-green-500"></i> Large</td>
+                                    <td class="px-6 py-4 text-center"><i class="fas fa-expand text-yellow-500"></i> Medium</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold font-['Rajdhani'] mb-4">Industry Applications</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Serving diverse industries with customized 3D printing solutions
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+                        <div class="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-stethoscope text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Healthcare</h3>
+                        <p class="text-gray-600 mb-4">Medical devices, surgical guides, prosthetics, and anatomical models</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Biocompatible materials</li>
+                            <li>• Custom implants</li>
+                            <li>• Patient-specific solutions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-50 to-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+                        <div class="w-14 h-14 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-plane text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Aerospace</h3>
+                        <p class="text-gray-600 mb-4">Lightweight components, complex geometries, and rapid prototyping</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Weight reduction</li>
+                            <li>• Complex assemblies</li>
+                            <li>• High-performance materials</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-green-50 to-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+                        <div class="w-14 h-14 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-graduation-cap text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Education</h3>
+                        <p class="text-gray-600 mb-4">Educational models, research prototypes, and student projects</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Learning aids</li>
+                            <li>• Research tools</li>
+                            <li>• Affordable prototyping</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-orange-50 to-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+                        <div class="w-14 h-14 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-cogs text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Manufacturing</h3>
+                        <p class="text-gray-600 mb-4">Tooling, jigs, fixtures, and end-use parts</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Custom tooling</li>
+                            <li>• Replacement parts</li>
+                            <li>• Low-volume production</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-red-50 to-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+                        <div class="w-14 h-14 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-palette text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Art & Design</h3>
+                        <p class="text-gray-600 mb-4">Sculptures, jewelry, architectural models, and creative projects</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Artistic expression</li>
+                            <li>• Custom designs</li>
+                            <li>• Rapid iteration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-cyan-50 to-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+                        <div class="w-14 h-14 bg-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-microchip text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Electronics</h3>
+                        <p class="text-gray-600 mb-4">Enclosures, prototypes, and custom components</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Custom enclosures</li>
+                            <li>• Rapid prototyping</li>
+                            <li>• Component integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-orange-600 to-cyan-600">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold font-['Rajdhani'] text-white mb-6">Ready to Get Started?</h2>
+                <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                    Upload your design files and get instant quotes. Our team of experts is here to help you choose the best technology for your project.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="dashboard.html" class="bg-white text-orange-600 px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
+                        <i class="fas fa-upload mr-2"></i>Upload Your Design
+                    </a>
+                    <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-orange-600 transition-all">
+                        <i class="fas fa-phone mr-2"></i>Consult with Experts
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-cube text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">3D Print Pro</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Professional 3D printing services with cutting-edge technology and exceptional quality.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="materials.html" class="text-gray-400 hover:text-white transition-colors">Materials</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="how-it-works.html" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">File Guidelines</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping Info</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Returns</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Connect</h3>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="text-gray-400">
+                        <p class="mb-2">Supported File Formats:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-800 px-2 py-1 rounded text-xs">STL</span>
+                            <span class="bg-gray-800 px-2 py-1 rounded text-xs">OBJ</span>
+                            <span class="bg-gray-800 px-2 py-1 rounded text-xs">STEP</span>
+                            <span class="bg-gray-800 px-2 py-1 rounded text-xs">3MF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 3D Print Pro. All rights reserved. | 
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
