@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | 3D Print Pro</title>
+    <meta name="description"
+        content="Manage your 3D printing projects, upload files, and track orders with 3D Print Pro dashboard.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+
+<body class="bg-gray-50 text-gray-900 transition-colors duration-300">
+    <div class="flex h-screen overflow-hidden relative">
+        <!-- Sidebar Overlay (Mobile) -->
+        <div id="sidebarOverlay"
+            class="fixed inset-0 bg-black/50 z-40 lg:hidden hidden transition-opacity duration-300"></div>
+
+        <!-- Sidebar -->
+        <aside
+            class="sidebar fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-200 lg:static lg:inset-auto lg:translate-x-0 transform -translate-x-full flex-shrink-0 transition-all duration-300">
+            <div class="flex flex-col h-full">
+                <!-- Logo -->
+                <div class="p-6 border-b border-gray-200">
+                    <a href="index.html" class="flex items-center space-x-2 group">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
+                            <i class="fas fa-cube text-white text-xl"></i>
+                        </div>
+                        <span
+                            class="text-xl font-bold bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent">3D
+                            Print Pro</span>
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="flex-1 p-4 space-y-2">
+                    <a href="index.html"
+                        class="flex items-center space-x-3 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-home text-gray-600"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="index2.html"
+                        class="flex items-center space-x-3 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-home text-gray-600"></i>
+                        <span>Home 2</span>
+                    </a>
+                    <a href="#overview"
+                        class="sidebar-item active flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:text-orange-600 transition-all">
+                        <i class="fas fa-th-large w-5"></i>
+                        <span>Dashboard Overview</span>
+                    </a>
+                    <a href="#upload"
+                        class="sidebar-item flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:text-orange-600 transition-all">
+                        <i class="fas fa-upload w-5"></i>
+                        <span>Upload Files</span>
+                    </a>
+                    <a href="#jobs"
+                        class="sidebar-item flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:text-orange-600 transition-all">
+                        <i class="fas fa-tasks w-5"></i>
+                        <span>My Jobs</span>
+                    </a>
+                    <a href="#history"
+                        class="sidebar-item flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:text-orange-600 transition-all">
+                        <i class="fas fa-history w-5"></i>
+                        <span>Order History</span>
+                    </a>
+                    <a href="#calculator"
+                        class="sidebar-item flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:text-orange-600 transition-all">
+                        <i class="fas fa-calculator w-5"></i>
+                        <span>Quote Calculator</span>
+                    </a>
+                    <a href="#settings"
+                        class="sidebar-item flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:text-orange-600 transition-all">
+                        <i class="fas fa-cog w-5"></i>
+                        <span>Settings</span>
+                    </a>
+                </nav>
+
+                <!-- User Info -->
+                <div class="p-4 border-t border-gray-200">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://picsum.photos/seed/user123/40/40" alt="User" class="w-10 h-10 rounded-full">
+                        <div class="flex-1">
+                            <div class="font-semibold text-sm">John Doe</div>
+                            <div class="text-xs text-gray-500">john@example.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Top Bar -->
+            <header class="bg-white border-b border-gray-200 px-4 lg:px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2 md:space-x-4">
+                        <!-- Mobile Sidebar Toggle -->
+                        <button id="sidebarToggle" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                            <i class="fas fa-bars"></i>
+                        </button>
+
+                        <!-- Search -->
+                        <div class="relative hidden sm:block">
+                            <input type="text" placeholder="Search jobs..."
+                                class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent w-40 md:w-64 text-sm">
+                            <i
+                                class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-1 md:space-x-4">
+                        <!-- Dark Mode Toggle -->
+                        <button id="darkModeToggle"
+                            class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors text-gray-600">
+                            <i class="fas fa-moon"></i>
+                        </button>
+
+                        <!-- Notifications -->
+                        <button
+                            class="relative w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors text-gray-600">
+                            <i class="fas fa-bell"></i>
+                            <span
+                                class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+                        </button>
+
+                        <!-- User Profile -->
+                        <div class="relative px-1 md:px-2">
+                            <button
+                                class="flex items-center space-x-2 p-1.5 rounded-lg hover:bg-gray-100 transition-colors">
+                                <img src="https://picsum.photos/seed/user123/32/32" alt="User"
+                                    class="w-7 h-7 md:w-8 md:h-8 rounded-full border border-gray-200">
+                                <i class="fas fa-chevron-down text-gray-400 text-[10px] hidden md:block"></i>
+                            </button>
+                        </div>
+
+                        <!-- Logout Button -->
+                        <a href="index.html"
+                            class="bg-gray-800 text-white w-10 h-10 md:w-auto md:px-4 flex items-center justify-center rounded-lg hover:bg-orange-600 transition-all text-sm font-medium">
+                            <i class="fas fa-sign-out-alt md:mr-2"></i>
+                            <span class="hidden md:inline">Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="flex-1 overflow-y-auto p-6">
+                <!-- Dashboard Overview Section -->
+                <section id="overview" class="mb-8">
+                    <h1 class="text-3xl font-bold font-['Rajdhani'] mb-6">Dashboard Overview</h1>
+
+                    <!-- Stats Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover-lift">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-tasks text-orange-600 text-xl"></i>
+                                </div>
+                                <span class="text-sm text-cyan-600 font-semibold">+12%</span>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-900">24</div>
+                            <div class="text-sm text-gray-600">Total Jobs</div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover-lift">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-print text-cyan-600 text-xl"></i>
+                                </div>
+                                <span class="text-sm text-orange-600 font-semibold">3 Active</span>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-900">3</div>
+                            <div class="text-sm text-gray-600">In Progress</div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover-lift">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-check-circle text-orange-600 text-xl"></i>
+                                </div>
+                                <span class="text-sm text-cyan-600 font-semibold">+8%</span>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-900">21</div>
+                            <div class="text-sm text-gray-600">Completed</div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover-lift">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-dollar-sign text-cyan-600 text-xl"></i>
+                                </div>
+                                <span class="text-sm text-orange-600 font-semibold">+15%</span>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-900">$1,247</div>
+                            <div class="text-sm text-gray-600">Total Spent</div>
+                        </div>
+                    </div>
+
+                    <!-- Charts -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-900">Monthly Spending</h3>
+                            <div class="h-[300px] w-full">
+                                <canvas id="spendingChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-900">Jobs by Material</h3>
+                            <div class="h-[300px] w-full flex items-center justify-center">
+                                <canvas id="materialChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- File Upload Section -->
+                <section id="upload" class="mb-8 hidden">
+                    <h2 class="text-2xl font-bold font-['Rajdhani'] mb-6">Upload Files</h2>
+
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <!-- Upload Zone -->
+                        <div id="dropZone"
+                            class="upload-zone border-2 border-dashed border-gray-300 rounded-xl p-12 text-center hover:border-orange-500 transition-colors cursor-pointer">
+                            <div class="mb-4">
+                                <i class="fas fa-cloud-upload-alt text-6xl text-gray-400"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Drag & Drop your files here</h3>
+                            <p class="text-gray-600 mb-4">or click to browse</p>
+                            <p class="text-sm text-gray-500">Supported formats: STL, OBJ, STEP, 3MF (Max 50MB)</p>
+                            <input type="file" id="fileInput" class="hidden" multiple
+                                accept=".stl,.obj,.step,.stp,.3mf">
+                        </div>
+
+                        <!-- Upload Progress -->
+                        <div id="uploadProgress" class="hidden mt-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Uploading files...</span>
+                                <span id="progressPercent" class="text-sm font-medium">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <!-- File List -->
+                        <div id="fileList" class="mt-6 space-y-3"></div>
+                    </div>
+                </section>
+
+                <!-- 3D Viewer Section -->
+                <section id="viewer" class="mb-8 hidden">
+                    <h2 class="text-2xl font-bold font-['Rajdhani'] mb-6">3D File Preview</h2>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="viewer-container h-96 relative">
+                            <div id="threejsCanvas" class="w-full h-full"></div>
+
+                            <!-- Viewer Controls -->
+                            <div class="absolute top-4 right-4 bg-white rounded-lg shadow-lg p-2 space-y-2">
+                                <button class="w-10 h-10 rounded hover:bg-gray-100 transition-colors"
+                                    title="Reset View">
+                                    <i class="fas fa-home"></i>
+                                </button>
+                                <button class="w-10 h-10 rounded hover:bg-gray-100 transition-colors" title="Wireframe">
+                                    <i class="fas fa-border-all"></i>
+                                </button>
+                                <button class="w-10 h-10 rounded hover:bg-gray-100 transition-colors"
+                                    title="Fullscreen">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+
+                            <!-- File Info -->
+                            <div class="absolute bottom-4 left-4 bg-white rounded-lg shadow-lg p-4">
+                                <h4 class="font-semibold mb-2">File Information</h4>
+                                <div class="text-sm space-y-1">
+                                    <div>Dimensions: <span id="modelDimensions">--</span></div>
+                                    <div>Volume: <span id="modelVolume">--</span></div>
+                                    <div>Surface Area: <span id="modelSurface">--</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Jobs Section -->
+                <section id="jobs" class="mb-8 hidden">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold font-['Rajdhani']">My Jobs</h2>
+                        <div class="flex space-x-3">
+                            <button
+                                class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                                <i class="fas fa-filter mr-2"></i>Filter
+                            </button>
+                            <button
+                                class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                                <i class="fas fa-sort mr-2"></i>Sort
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Jobs Table -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead class="bg-gray-50 border-b border-gray-200">
+                                    <tr>
+                                        <th
+                                            class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Job ID</th>
+                                        <th
+                                            class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            File Name</th>
+                                        <th
+                                            class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Status</th>
+                                        <th
+                                            class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Material</th>
+                                        <th
+                                            class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Quantity</th>
+                                        <th
+                                            class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Price</th>
+                                        <th
+                                            class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">#001</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">prototype_part.stl</td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="status-badge status-printing">Printing</span>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">PLA</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">5</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold">$25.00</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                            <button class="text-orange-600 hover:text-orange-700 mr-3">View</button>
+                                            <button class="text-gray-600 hover:text-gray-700">Download</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">#002</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">housing_cover.obj</td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="status-badge status-quality-check">Quality Check</span>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">ABS</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">2</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold">$18.00</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                            <button class="text-orange-600 hover:text-orange-700 mr-3">View</button>
+                                            <button class="text-gray-600 hover:text-gray-700">Download</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">#003</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">gear_assembly.step</td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="status-badge status-completed">Completed</span>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">Resin</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">1</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold">$45.00</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                            <button class="text-orange-600 hover:text-orange-700 mr-3">View</button>
+                                            <button class="text-gray-600 hover:text-gray-700">Invoice</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Job Details Modal -->
+                <div id="jobModal"
+                    class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+                    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                        <div class="p-6 border-b border-gray-200">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xl font-bold">Job Details</h3>
+                                <button data-modal-close class="text-gray-400 hover:text-gray-600">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <!-- Status Timeline -->
+                            <div class="mb-6">
+                                <h4 class="font-semibold mb-4">Status Timeline</h4>
+                                <div class="space-y-4">
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot completed"></div>
+                                        <div>
+                                            <div class="font-medium">Uploaded</div>
+                                            <div class="text-sm text-gray-500">Jan 20, 2024 - 10:30 AM</div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot completed"></div>
+                                        <div>
+                                            <div class="font-medium">Processing</div>
+                                            <div class="text-sm text-gray-500">Jan 20, 2024 - 11:15 AM</div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot completed"></div>
+                                        <div>
+                                            <div class="font-medium">Printing</div>
+                                            <div class="text-sm text-gray-500">Jan 21, 2024 - 9:00 AM</div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot active"></div>
+                                        <div>
+                                            <div class="font-medium">Quality Check</div>
+                                            <div class="text-sm text-gray-500">In Progress</div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div>
+                                            <div class="font-medium text-gray-400">Shipped</div>
+                                            <div class="text-sm text-gray-400">Estimated: Jan 23, 2024</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Communication Thread -->
+                            <div>
+                                <h4 class="font-semibold mb-4">Communication</h4>
+                                <div class="space-y-3 mb-4">
+                                    <div class="bg-gray-50 rounded-lg p-3">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="font-medium text-sm">Support Team</span>
+                                            <span class="text-xs text-gray-500">2 hours ago</span>
+                                        </div>
+                                        <p class="text-sm">Your part is currently undergoing quality inspection. We
+                                            expect to complete this by end of day.</p>
+                                    </div>
+                                    <div class="bg-orange-50 rounded-lg p-3 ml-8">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="font-medium text-sm">You</span>
+                                            <span class="text-xs text-gray-500">1 hour ago</span>
+                                        </div>
+                                        <p class="text-sm">Great! Please let me know if any issues are found.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex space-x-2">
+                                    <input type="text" placeholder="Type your message..."
+                                        class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                    <button
+                                        class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/viewer.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

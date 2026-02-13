@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries Served | 3D Print Pro</title>
+    <meta name="description"
+        content="3D Print Pro serves diverse industries including healthcare, aerospace, education, engineering, and art & design with customized 3D printing solutions.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+
+<body class="bg-white text-gray-900 transition-colors duration-300">
+    <!-- Header -->
+    <header
+        class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 transition-colors duration-300">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2 group">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
+                        <i class="fas fa-cube text-white text-xl"></i>
+                    </div>
+                    <span
+                        class="text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent whitespace-nowrap">3D
+                        Print Pro</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden xl:flex items-center space-x-4 xl:space-x-8">
+                    <a href="index.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home</a>
+                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home
+                        2</a>
+                    <a href="services.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
+                    <a href="materials.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
+                    <a href="gallery.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Gallery</a>
+                    <a href="pricing.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
+                    <a href="contact.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
+                </div>
+
+                <!-- Right Side Actions -->
+                <div class="flex items-center space-x-2 md:space-x-4">
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-moon text-gray-600"></i>
+                    </button>
+
+                    <!-- Auth Links -->
+                    <div class="hidden xl:flex items-center space-x-4">
+                        <a href="login.html"
+                            class="px-3 xl:px-4 py-2 rounded-lg font-medium text-gray-700 hover:text-orange-600 border border-gray-300 hover:border-orange-600 transition-all text-sm xl:text-base">Login</a>
+                        <a href="register.html"
+                            class="bg-orange-600 text-white px-3 xl:px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm xl:text-base">Sign
+                            Up</a>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <a href="dashboard.html"
+                        class="hidden xl:flex bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-4 xl:px-6 py-2 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all text-sm xl:text-base">
+                        <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
+                    </a>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobileMenuToggle" class="xl:hidden p-2 rounded-lg hover:bg-gray-100">
+                        <i class="fas fa-bars text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden xl:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-3 mt-4">
+                    <a href="index.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home</a>
+                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home
+                        2</a>
+                    <a href="services.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
+                    <a href="materials.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
+                    <a href="gallery.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Gallery</a>
+                    <a href="pricing.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
+                    <a href="contact.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
+                    <div class="flex flex-col space-y-3 pt-3 border-t border-gray-200">
+                        <div class="flex items-center space-x-4">
+                            <a href="login.html"
+                                class="px-4 py-2 rounded-lg font-medium text-gray-700 hover:text-orange-600 border border-gray-300 hover:border-orange-600 transition-all">Login</a>
+                            <a href="register.html"
+                                class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">Sign
+                                Up</a>
+                        </div>
+                        <a href="dashboard.html"
+                            class="w-full bg-gradient-to-r from-orange-600 to-cyan-600 text-white text-center px-6 py-3 rounded-lg font-semibold shadow-lg">
+                            <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="py-20 bg-gradient-to-br from-orange-50 via-white to-cyan-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h1 class="text-5xl lg:text-6xl font-bold font-['Rajdhani'] mb-6">
+                        Industries We <span
+                            class="bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent">Serve</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        From healthcare to aerospace, education to art & design, we provide customized 3D printing
+                        solutions tailored to the unique needs of diverse industries.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#case-studies"
+                            class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
+                            <i class="fas fa-briefcase mr-2"></i>View Case Studies
+                        </a>
+                        <a href="contact.html"
+                            class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-orange-600 hover:text-orange-600 transition-all">
+                            <i class="fas fa-phone mr-2"></i>Industry Solutions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries Grid -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold font-['Rajdhani'] mb-4">Industry Solutions</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Specialized 3D printing services designed to meet the unique requirements of each industry
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Healthcare -->
+                    <div
+                        class="bg-gradient-to-br from-cyan-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center">
+                        <div class="w-16 h-16 bg-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-stethoscope text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Healthcare</h3>
+                        <p class="text-gray-600 mb-6">
+                            Medical devices, surgical guides, prosthetics, and anatomical models with biocompatible
+                            materials
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6 list-none">
+                            <li>Custom implants and prosthetics</li>
+                            <li>Surgical planning models</li>
+                            <li>Medical device prototyping</li>
+                            <li>Dental applications</li>
+                        </ul>
+                        <div
+                            class="flex items-center justify-center text-cyan-600 font-semibold cursor-pointer hover:text-orange-600 transition-colors">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+
+                    <!-- Aerospace -->
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center">
+                        <div class="w-16 h-16 bg-orange-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-plane text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Aerospace</h3>
+                        <p class="text-gray-600 mb-6">
+                            Lightweight components, complex geometries, and rapid prototyping for aerospace applications
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6 list-none">
+                            <li>Lightweight structural parts</li>
+                            <li>Complex internal channels</li>
+                            <li>Rapid prototyping</li>
+                            <li>High-performance materials</li>
+                        </ul>
+                        <div
+                            class="flex items-center justify-center text-orange-600 font-semibold cursor-pointer hover:text-cyan-600 transition-colors">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div
+                        class="bg-gradient-to-br from-cyan-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center">
+                        <div class="w-16 h-16 bg-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Education</h3>
+                        <p class="text-gray-600 mb-6">
+                            Educational models, research prototypes, and student projects with affordable pricing
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6 list-none">
+                            <li>Anatomical models</li>
+                            <li>Engineering prototypes</li>
+                            <li>Learning aids</li>
+                            <li>Student projects</li>
+                        </ul>
+                        <div
+                            class="flex items-center justify-center text-cyan-600 font-semibold cursor-pointer hover:text-orange-600 transition-colors">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+
+                    <!-- Engineering -->
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center">
+                        <div class="w-16 h-16 bg-orange-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-cogs text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Engineering</h3>
+                        <p class="text-gray-600 mb-6">
+                            Tooling, jigs, fixtures, and end-use parts for manufacturing and engineering applications
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6 list-none">
+                            <li>Custom tooling</li>
+                            <li>Replacement parts</li>
+                            <li>Functional prototypes</li>
+                            <li>Low-volume production</li>
+                        </ul>
+                        <div
+                            class="flex items-center justify-center text-orange-600 font-semibold cursor-pointer hover:text-cyan-600 transition-colors">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+
+                    <!-- Art & Design -->
+                    <div
+                        class="bg-gradient-to-br from-cyan-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center">
+                        <div class="w-16 h-16 bg-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-palette text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Art & Design</h3>
+                        <p class="text-gray-600 mb-6">
+                            Sculptures, jewelry, architectural models, and creative projects with high detail
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6 list-none">
+                            <li>Artistic sculptures</li>
+                            <li>Custom jewelry</li>
+                            <li>Architectural models</li>
+                            <li>Creative prototypes</li>
+                        </ul>
+                        <div
+                            class="flex items-center justify-center text-cyan-600 font-semibold cursor-pointer hover:text-orange-600 transition-colors">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+
+                    <!-- Electronics -->
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center">
+                        <div class="w-16 h-16 bg-orange-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-microchip text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Electronics</h3>
+                        <p class="text-gray-600 mb-6">
+                            Enclosures, prototypes, and custom components for electronic devices and IoT applications
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6 list-none">
+                            <li>Custom enclosures</li>
+                            <li>Rapid prototyping</li>
+                            <li>Component integration</li>
+                            <li>IoT device cases</li>
+                        </ul>
+                        <div
+                            class="flex items-center justify-center text-orange-600 font-semibold cursor-pointer hover:text-cyan-600 transition-colors">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section id="case-studies" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold font-['Rajdhani'] mb-4">Success Stories</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Real-world examples of how 3D printing is transforming industries
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Case Study 1 -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600"
+                            alt="Medical Case Study" class="w-full h-48 object-cover">
+                        <div class="p-8">
+                            <div class="flex items-center mb-4">
+                                <span
+                                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold mr-3">Healthcare</span>
+                                <span class="text-gray-500 text-sm">2 weeks ago</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">Custom Surgical Guide Saves Critical Time</h3>
+                            <p class="text-gray-600 mb-6">
+                                A leading hospital reduced surgery preparation time by 60% using our custom 3D printed
+                                surgical guides.
+                                The patient-specific guides enabled surgeons to plan and execute complex procedures with
+                                unprecedented precision.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    <span><i class="fas fa-clock mr-1"></i>48hr delivery</span>
+                                    <span><i class="fas fa-cube mr-1"></i>Biocompatible resin</span>
+                                </div>
+                                <button class="text-orange-600 hover:text-orange-700 font-semibold">
+                                    Read More <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600"
+                            alt="Aerospace Case Study" class="w-full h-48 object-cover">
+                        <div class="p-8">
+                            <div class="flex items-center mb-4">
+                                <span
+                                    class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold mr-3">Aerospace</span>
+                                <span class="text-gray-500 text-sm">1 month ago</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">Weight Reduction Saves Fuel Costs</h3>
+                            <p class="text-gray-600 mb-6">
+                                An aerospace company achieved 40% weight reduction in aircraft components using our
+                                metal 3D printing services.
+                                The redesigned parts maintained structural integrity while significantly reducing fuel
+                                consumption.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    <span><i class="fas fa-clock mr-1"></i>2 weeks production</span>
+                                    <span><i class="fas fa-cube mr-1"></i>Titanium alloy</span>
+                                </div>
+                                <button class="text-orange-600 hover:text-orange-700 font-semibold">
+                                    Read More <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-orange-600 to-cyan-600">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold font-['Rajdhani'] text-white mb-6">Transform Your Industry</h2>
+                <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                    Discover how 3D printing can revolutionize your workflow and unlock new possibilities for your
+                    business.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="dashboard.html"
+                        class="bg-white text-orange-600 px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
+                        <i class="fas fa-rocket mr-2"></i>Start Your Project
+                    </a>
+                    <a href="contact.html"
+                        class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-orange-600 transition-all">
+                        <i class="fas fa-headset mr-2"></i>Industry Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-cube text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">3D Print Pro</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Professional 3D printing services with cutting-edge technology and exceptional quality.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="materials.html"
+                                class="text-gray-400 hover:text-white transition-colors">Materials</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                        </li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-colors">Pricing</a>
+                        </li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="how-it-works.html" class="text-gray-400 hover:text-white transition-colors">How It
+                                Works</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact
+                                Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">File Guidelines</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping Info</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Returns</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Connect</h3>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="text-gray-400">
+                        <p class="mb-2">Supported File Formats:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-800 px-2 py-1 rounded text-xs">STL</span>
+                            <span class="bg-gray-800 px-2 py-1 rounded text-xs">OBJ</span>
+                            <span class="bg-gray-800 px-2 py-1 rounded text-xs">STEP</span>
+                            <span class="bg-gray-800 px-2 py-1 rounded text-xs">3MF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 3D Print Pro. All rights reserved. |
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> |
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
