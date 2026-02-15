@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Print Pro - Professional 3D Printing Services</title>
-    <meta name="description" content="Professional 3D printing service bureau with fast turnaround, multiple materials, and competitive pricing. Upload your files and get instant quotes.">
+    <meta name="description"
+        content="Professional 3D printing service bureau with fast turnaround, multiple materials, and competitive pricing. Upload your files and get instant quotes.">
     <meta name="keywords" content="3D printing, rapid prototyping, SLA, FDM, SLS, custom parts, manufacturing">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="3D Print Pro - Professional 3D Printing Services">
-    <meta property="og:description" content="Professional 3D printing service bureau with fast turnaround, multiple materials, and competitive pricing.">
+    <meta property="og:description"
+        content="Professional 3D printing service bureau with fast turnaround, multiple materials, and competitive pricing.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -51,66 +56,100 @@
     }
     </script>
 </head>
+
 <body class="bg-white text-gray-900 transition-colors duration-300">
     <!-- Header -->
-    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 transition-colors duration-300">
+    <header
+        class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 transition-colors duration-300">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center space-x-2 group">
-                    <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
                         <i class="fas fa-cube text-white text-xl"></i>
                     </div>
-                    <span class="text-2xl font-bold bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent">3D Print Pro</span>
+                    <span
+                        class="text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent whitespace-nowrap">3D
+                        Print Pro</span>
                 </a>
-                
+
                 <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Home</a>
-                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home 2</a>
-                    <a href="services.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
-                    <a href="materials.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
-                    <a href="gallery.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Gallery</a>
-                    <a href="pricing.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
-                    <a href="contact.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
+                <div class="hidden xl:flex items-center space-x-4 xl:space-x-8">
+                    <a href="index.html"
+                        class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Home</a>
+                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home
+                        2</a>
+                    <a href="services.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
+                    <a href="materials.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
+                    <a href="gallery.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Gallery</a>
+                    <a href="pricing.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
+                    <a href="contact.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
                 </div>
-                
+
                 <!-- Right Side Actions -->
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2 md:space-x-4">
                     <!-- Dark Mode Toggle -->
                     <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
                         <i class="fas fa-moon text-gray-600"></i>
                     </button>
-                    
+
                     <!-- Auth Links -->
-                    <div class="hidden md:flex items-center space-x-3">
-                        <a href="register.html" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">Sign Up</a>
+                    <div class="hidden xl:flex items-center space-x-4">
+                        <a href="login.html"
+                            class="px-3 xl:px-4 py-2 rounded-lg font-medium text-gray-700 hover:text-orange-600 border border-gray-300 hover:border-orange-600 transition-all text-sm xl:text-base">Login</a>
+                        <a href="register.html"
+                            class="bg-orange-600 text-white px-3 xl:px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm xl:text-base">Sign
+                            Up</a>
                     </div>
-                    
+
                     <!-- CTA Button -->
-                    <a href="dashboard.html" class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all">
+                    <a href="dashboard.html"
+                        class="hidden xl:flex bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-4 xl:px-6 py-2 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all text-sm xl:text-base">
                         <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
                     </a>
-                    
+
                     <!-- Mobile Menu Toggle -->
-                    <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <button id="mobileMenuToggle" class="xl:hidden p-2 rounded-lg hover:bg-gray-100">
                         <i class="fas fa-bars text-gray-600"></i>
                     </button>
                 </div>
             </div>
-            
+
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+            <div id="mobileMenu" class="hidden xl:hidden mt-4 pb-4 border-t border-gray-200">
                 <div class="flex flex-col space-y-3 mt-4">
-                    <a href="index.html" class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Home</a>
-                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home 2</a>
-                    <a href="services.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
-                    <a href="materials.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
-                    <a href="gallery.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Gallery</a>
-                    <a href="pricing.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
-                    <a href="contact.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
-                    <div class="flex items-center space-x-3 pt-3 border-t border-gray-200">
-                        <a href="register.html" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">Sign Up</a>
+                    <a href="index.html"
+                        class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Home</a>
+                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home
+                        2</a>
+                    <a href="services.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
+                    <a href="materials.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
+                    <a href="gallery.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Gallery</a>
+                    <a href="pricing.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
+                    <a href="contact.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
+                    <div class="flex flex-col space-y-3 pt-3 border-t border-gray-200">
+                        <div class="flex items-center space-x-4">
+                            <a href="login.html"
+                                class="px-4 py-2 rounded-lg font-medium text-gray-700 hover:text-orange-600 border border-gray-300 hover:border-orange-600 transition-all">Login</a>
+                            <a href="register.html"
+                                class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">Sign
+                                Up</a>
+                        </div>
+                        <a href="dashboard.html"
+                            class="w-full bg-gradient-to-r from-orange-600 to-cyan-600 text-white text-center px-6 py-3 rounded-lg font-semibold shadow-lg">
+                            <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
+                        </a>
                     </div>
                 </div>
             </div>
@@ -126,29 +165,33 @@
                 <div class="absolute top-20 left-10 w-64 h-64 bg-orange-400 rounded-full filter blur-3xl"></div>
                 <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-400 rounded-full filter blur-3xl"></div>
             </div>
-            
+
             <div class="container mx-auto px-4 relative z-10">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="text-center lg:text-left">
                         <h1 class="text-5xl lg:text-7xl font-bold font-['Rajdhani'] mb-6">
-                            <span class="bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent">Transform Ideas</span>
+                            <span
+                                class="bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent">Transform
+                                Ideas</span>
                             <br>
                             <span class="text-gray-900">Into Reality</span>
                         </h1>
                         <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                            Professional 3D printing services with cutting-edge technology, 
-                            fast turnaround times, and competitive pricing. From prototypes 
+                            Professional 3D printing services with cutting-edge technology,
+                            fast turnaround times, and competitive pricing. From prototypes
                             to production parts, we bring your designs to life.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="dashboard.html" class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
+                            <a href="dashboard.html"
+                                class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
                                 <i class="fas fa-rocket mr-2"></i>Start Printing
                             </a>
-                            <a href="how-it-works.html" class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-orange-600 hover:text-orange-600 transition-all">
+                            <a href="how-it-works.html"
+                                class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-orange-600 hover:text-orange-600 transition-all">
                                 <i class="fas fa-play-circle mr-2"></i>How It Works
                             </a>
                         </div>
-                        
+
                         <!-- Stats -->
                         <div class="grid grid-cols-3 gap-6 mt-12">
                             <div class="text-center">
@@ -156,27 +199,26 @@
                                 <div class="text-sm text-gray-600">Parts Printed</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-3xl font-bold text-cyan-600">24hr</div>
-                                <div class="text-sm text-gray-600">Fast Turnaround</div>
+                                <div class="text-3xl font-bold text-orange-600">24h</div>
+                                <div class="text-sm text-gray-600">Avg. Turnaround</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-3xl font-bold text-purple-600">99.9%</div>
+                                <div class="text-3xl font-bold text-cyan-600">99.9%</div>
                                 <div class="text-sm text-gray-600">Success Rate</div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800" 
-                             alt="3D Printer" 
-                             class="rounded-2xl shadow-2xl w-full h-auto">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800" alt="3D Printer"
+                            class="rounded-2xl shadow-2xl w-full h-auto">
                         <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-4">
                             <div class="flex items-center space-x-3">
-                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-check text-green-600"></i>
+                                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-orange-600"></i>
                                 </div>
                                 <div>
-                                    <div class="font-semibold">Quality Guaranteed</div>
+                                    <div class="font-semibold text-gray-900">Quality Guaranteed</div>
                                     <div class="text-sm text-gray-600">ISO Certified</div>
                                 </div>
                             </div>
@@ -192,58 +234,61 @@
                 <div class="text-center mb-16">
                     <h2 class="text-4xl font-bold font-['Rajdhani'] mb-4">Why Choose 3D Print Pro?</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        We combine cutting-edge technology with exceptional service to deliver 
+                        We combine cutting-edge technology with exceptional service to deliver
                         the best 3D printing experience for your projects.
                     </p>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center">
+                        <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
                             <i class="fas fa-tachometer-alt text-orange-600 text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Lightning Fast</h3>
-                        <p class="text-gray-600">24-hour turnaround on most orders. Get your parts when you need them.</p>
+                        <p class="text-gray-600">24-hour turnaround on most orders. Get your parts when you need them.
+                        </p>
                     </div>
-                    
-                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="w-16 h-16 bg-cyan-100 rounded-lg flex items-center justify-center mb-6">
+
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center">
+                        <div class="w-16 h-16 bg-cyan-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
                             <i class="fas fa-cubes text-cyan-600 text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Multiple Technologies</h3>
-                        <p class="text-gray-600">FDM, SLA, SLS, and metal printing. We have the right technology for your needs.</p>
+                        <p class="text-gray-600">FDM, SLA, SLS, and metal printing. We have the right technology for
+                            your needs.</p>
                     </div>
-                    
-                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                            <i class="fas fa-shield-alt text-purple-600 text-2xl"></i>
+
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center">
+                        <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-shield-alt text-orange-600 text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Quality Assured</h3>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">Quality Assured</h3>
                         <p class="text-gray-600">ISO certified processes and rigorous quality control on every part.</p>
                     </div>
-                    
-                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                            <i class="fas fa-dollar-sign text-green-600 text-2xl"></i>
+
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center">
+                        <div class="w-16 h-16 bg-cyan-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-dollar-sign text-cyan-600 text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Competitive Pricing</h3>
                         <p class="text-gray-600">Transparent pricing with no hidden fees. Bulk discounts available.</p>
                     </div>
-                    
-                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                            <i class="fas fa-users text-blue-600 text-2xl"></i>
+
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center">
+                        <div class="w-16 h-16 bg-cyan-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-users text-cyan-600 text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Expert Support</h3>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">Expert Support</h3>
                         <p class="text-gray-600">Dedicated engineers to help optimize your designs for printing.</p>
                     </div>
-                    
-                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                            <i class="fas fa-truck text-red-600 text-2xl"></i>
+
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center">
+                        <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-truck text-orange-600 text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Global Shipping</h3>
-                        <p class="text-gray-600">Fast and reliable shipping worldwide. Track your order every step of the way.</p>
+                        <p class="text-gray-600">Fast and reliable shipping worldwide. Track your order every step of
+                            the way.</p>
                     </div>
                 </div>
             </div>
@@ -255,14 +300,15 @@
                 <div class="text-center mb-16">
                     <h2 class="text-4xl font-bold font-['Rajdhani'] mb-4">Premium Materials</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Choose from our extensive range of engineering-grade materials 
+                        Choose from our extensive range of engineering-grade materials
                         for any application or industry.
                     </p>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="group cursor-pointer">
-                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center group-hover:shadow-lg transition-all">
+                        <div
+                            class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center group-hover:shadow-lg transition-all">
                             <div class="w-20 h-20 bg-blue-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
                                 <i class="fas fa-cube text-white text-3xl"></i>
                             </div>
@@ -271,31 +317,35 @@
                             <div class="mt-3 text-blue-600 font-semibold">From $0.10/cm³</div>
                         </div>
                     </div>
-                    
+
                     <div class="group cursor-pointer">
-                        <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 text-center group-hover:shadow-lg transition-all">
-                            <div class="w-20 h-20 bg-red-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                        <div
+                            class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 text-center group-hover:shadow-lg transition-all">
+                            <div
+                                class="w-20 h-20 bg-orange-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
                                 <i class="fas fa-cube text-white text-3xl"></i>
                             </div>
-                            <h3 class="font-semibold text-lg mb-2">ABS</h3>
+                            <h3 class="font-semibold text-lg mb-2 text-gray-900">ABS</h3>
                             <p class="text-sm text-gray-600">Durable, temperature resistant</p>
-                            <div class="mt-3 text-red-600 font-semibold">From $0.15/cm³</div>
+                            <div class="mt-3 text-orange-600 font-semibold">From $0.15/cm³</div>
                         </div>
                     </div>
-                    
+
                     <div class="group cursor-pointer">
-                        <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center group-hover:shadow-lg transition-all">
-                            <div class="w-20 h-20 bg-purple-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                        <div
+                            class="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-xl p-6 text-center group-hover:shadow-lg transition-all">
+                            <div class="w-20 h-20 bg-cyan-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
                                 <i class="fas fa-cube text-white text-3xl"></i>
                             </div>
-                            <h3 class="font-semibold text-lg mb-2">Resin</h3>
+                            <h3 class="font-semibold text-lg mb-2 text-gray-900">Resin</h3>
                             <p class="text-sm text-gray-600">High detail, smooth finish</p>
-                            <div class="mt-3 text-purple-600 font-semibold">From $0.25/cm³</div>
+                            <div class="mt-3 text-cyan-600 font-semibold">From $0.25/cm³</div>
                         </div>
                     </div>
-                    
+
                     <div class="group cursor-pointer">
-                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 text-center group-hover:shadow-lg transition-all">
+                        <div
+                            class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 text-center group-hover:shadow-lg transition-all">
                             <div class="w-20 h-20 bg-gray-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
                                 <i class="fas fa-cube text-white text-3xl"></i>
                             </div>
@@ -305,9 +355,10 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="text-center mt-12">
-                    <a href="materials.html" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold">
+                    <a href="materials.html"
+                        class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold">
                         View All Materials
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
@@ -324,11 +375,12 @@
                             <h2 class="text-3xl font-bold font-['Rajdhani'] mb-4">Instant Quote Calculator</h2>
                             <p class="text-gray-600">Get an instant estimate for your 3D printing project</p>
                         </div>
-                        
+
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Material Type</label>
-                                <select id="quoteMaterial" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                <select id="quoteMaterial"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
                                     <option value="pla">PLA - $0.10/cm³</option>
                                     <option value="abs">ABS - $0.15/cm³</option>
                                     <option value="resin">Resin - $0.25/cm³</option>
@@ -336,27 +388,30 @@
                                     <option value="metal">Metal - $5.00/cm³</option>
                                 </select>
                             </div>
-                            
+
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Volume (cm³)</label>
-                                <input type="number" id="quoteVolume" placeholder="Enter volume" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                <input type="number" id="quoteVolume" placeholder="Enter volume"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
                             </div>
-                            
+
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Quantity</label>
-                                <input type="number" id="quoteQuantity" value="1" min="1" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                <input type="number" id="quoteQuantity" value="1" min="1"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
                             </div>
-                            
+
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Print Quality</label>
-                                <select id="quoteQuality" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                <select id="quoteQuality"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
                                     <option value="standard">Standard (0.2mm)</option>
                                     <option value="high">High (0.1mm)</option>
                                     <option value="ultra">Ultra (0.05mm)</option>
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="mt-8 p-6 bg-gradient-to-r from-orange-50 to-cyan-50 rounded-lg">
                             <div class="flex justify-between items-center">
                                 <div>
@@ -367,7 +422,8 @@
                                     <div class="text-sm text-gray-600">Estimated Time</div>
                                     <div class="text-xl font-semibold text-cyan-600" id="quoteTime">1-2 days</div>
                                 </div>
-                                <button onclick="calculateQuote()" class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all">
+                                <button onclick="calculateQuote()"
+                                    class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all">
                                     Calculate Quote
                                 </button>
                             </div>
@@ -382,14 +438,16 @@
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-4xl font-bold font-['Rajdhani'] text-white mb-6">Ready to Start Printing?</h2>
                 <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                    Join thousands of engineers, designers, and innovators who trust 3D Print Pro 
+                    Join thousands of engineers, designers, and innovators who trust 3D Print Pro
                     for their rapid prototyping and manufacturing needs.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="dashboard.html" class="bg-white text-orange-600 px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
+                    <a href="dashboard.html"
+                        class="bg-white text-orange-600 px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
                         <i class="fas fa-upload mr-2"></i>Upload Your First File
                     </a>
-                    <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-orange-600 transition-all">
+                    <a href="contact.html"
+                        class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-orange-600 transition-all">
                         <i class="fas fa-phone mr-2"></i>Talk to an Expert
                     </a>
                 </div>
@@ -403,7 +461,8 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center">
                             <i class="fas fa-cube text-white text-xl"></i>
                         </div>
                         <span class="text-2xl font-bold">3D Print Pro</span>
@@ -412,42 +471,53 @@
                         Professional 3D printing services with cutting-edge technology and exceptional quality.
                     </p>
                 </div>
-                
+
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
-                        <li><a href="materials.html" class="text-gray-400 hover:text-white transition-colors">Materials</a></li>
-                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
-                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="materials.html"
+                                class="text-gray-400 hover:text-white transition-colors">Materials</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                        </li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-colors">Pricing</a>
+                        </li>
                         <li><a href="faq.html" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Support</h3>
                     <ul class="space-y-2">
-                        <li><a href="how-it-works.html" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">File Guidelines</a></li>
+                        <li><a href="how-it-works.html" class="text-gray-400 hover:text-white transition-colors">How It
+                                Works</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact
+                                Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">File Guidelines</a>
+                        </li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping Info</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Returns</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Connect</h3>
                     <div class="flex space-x-4 mb-6">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -462,10 +532,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2026 3D Print Pro. All rights reserved. | 
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | 
+                <p>&copy; 2026 3D Print Pro. All rights reserved. |
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> |
                     <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
                 </p>
             </div>
@@ -481,7 +551,7 @@
             const volume = parseFloat(document.getElementById('quoteVolume').value) || 0;
             const quantity = parseInt(document.getElementById('quoteQuantity').value) || 1;
             const quality = document.getElementById('quoteQuality').value;
-            
+
             const prices = {
                 'pla': 0.10,
                 'abs': 0.15,
@@ -489,26 +559,26 @@
                 'nylon': 0.20,
                 'metal': 5.00
             };
-            
+
             const qualityMultipliers = {
                 'standard': 1.0,
                 'high': 1.3,
                 'ultra': 1.6
             };
-            
+
             const basePrice = prices[material] * volume * quantity;
             const finalPrice = basePrice * qualityMultipliers[quality];
-            
+
             document.getElementById('quotePrice').textContent = `$${finalPrice.toFixed(2)}`;
-            
+
             // Estimate time based on volume and quantity
             let estimatedDays = Math.ceil(volume / 50) + Math.ceil(quantity / 5);
             if (quality === 'high') estimatedDays += 1;
             if (quality === 'ultra') estimatedDays += 2;
-            
+
             document.getElementById('quoteTime').textContent = `${estimatedDays}-${estimatedDays + 1} days`;
         }
-        
+
         // Auto-calculate on input change
         document.querySelectorAll('#quoteMaterial, #quoteVolume, #quoteQuantity, #quoteQuality').forEach(element => {
             element.addEventListener('change', calculateQuote);
@@ -516,4 +586,5 @@
         });
     </script>
 </body>
+
 </html>

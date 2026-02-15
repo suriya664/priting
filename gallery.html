@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Printing Gallery | 3D Print Pro</title>
-    <meta name="description" content="Explore our 3D printing portfolio featuring prototypes, functional parts, artistic creations, and industrial components. Filter by category and technology.">
-    
+    <meta name="description"
+        content="Explore our 3D printing portfolio featuring prototypes, functional parts, artistic creations, and industrial components. Filter by category and technology.">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -27,66 +31,100 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
+
 <body class="bg-white text-gray-900 transition-colors duration-300">
     <!-- Header -->
-    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 transition-colors duration-300">
+    <header
+        class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 transition-colors duration-300">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center space-x-2 group">
-                    <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
                         <i class="fas fa-cube text-white text-xl"></i>
                     </div>
-                    <span class="text-2xl font-bold bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent">3D Print Pro</span>
+                    <span
+                        class="text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent whitespace-nowrap">3D
+                        Print Pro</span>
                 </a>
-                
+
                 <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home</a>
-                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home 2</a>
-                    <a href="services.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
-                    <a href="materials.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
-                    <a href="gallery.html" class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Gallery</a>
-                    <a href="pricing.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
-                    <a href="contact.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
+                <div class="hidden xl:flex items-center space-x-4 xl:space-x-8">
+                    <a href="index.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home</a>
+                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home
+                        2</a>
+                    <a href="services.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
+                    <a href="materials.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
+                    <a href="gallery.html"
+                        class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Gallery</a>
+                    <a href="pricing.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
+                    <a href="contact.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
                 </div>
-                
+
                 <!-- Right Side Actions -->
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2 md:space-x-4">
                     <!-- Dark Mode Toggle -->
                     <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
                         <i class="fas fa-moon text-gray-600"></i>
                     </button>
-                    
+
                     <!-- Auth Links -->
-                    <div class="hidden md:flex items-center space-x-3">
-                        <a href="register.html" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">Sign Up</a>
+                    <div class="hidden xl:flex items-center space-x-4">
+                        <a href="login.html"
+                            class="px-3 xl:px-4 py-2 rounded-lg font-medium text-gray-700 hover:text-orange-600 border border-gray-300 hover:border-orange-600 transition-all text-sm xl:text-base">Login</a>
+                        <a href="register.html"
+                            class="bg-orange-600 text-white px-3 xl:px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm xl:text-base">Sign
+                            Up</a>
                     </div>
-                    
+
                     <!-- CTA Button -->
-                    <a href="dashboard.html" class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all">
+                    <a href="dashboard.html"
+                        class="hidden xl:flex bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-4 xl:px-6 py-2 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all text-sm xl:text-base">
                         <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
                     </a>
-                    
+
                     <!-- Mobile Menu Toggle -->
-                    <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <button id="mobileMenuToggle" class="xl:hidden p-2 rounded-lg hover:bg-gray-100">
                         <i class="fas fa-bars text-gray-600"></i>
                     </button>
                 </div>
             </div>
-            
+
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+            <div id="mobileMenu" class="hidden xl:hidden mt-4 pb-4 border-t border-gray-200">
                 <div class="flex flex-col space-y-3 mt-4">
-                    <a href="index.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home</a>
-                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home 2</a>
-                    <a href="services.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
-                    <a href="materials.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
-                    <a href="gallery.html" class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Gallery</a>
-                    <a href="pricing.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
-                    <a href="contact.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
-                    <div class="flex items-center space-x-3 pt-3 border-t border-gray-200">
-                        <a href="register.html" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">Sign Up</a>
+                    <a href="index.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home</a>
+                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home
+                        2</a>
+                    <a href="services.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
+                    <a href="materials.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
+                    <a href="gallery.html"
+                        class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Gallery</a>
+                    <a href="pricing.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Pricing</a>
+                    <a href="contact.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
+                    <div class="flex flex-col space-y-3 pt-3 border-t border-gray-200">
+                        <div class="flex items-center space-x-4">
+                            <a href="login.html"
+                                class="px-4 py-2 rounded-lg font-medium text-gray-700 hover:text-orange-600 border border-gray-300 hover:border-orange-600 transition-all">Login</a>
+                            <a href="register.html"
+                                class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">Sign
+                                Up</a>
+                        </div>
+                        <a href="dashboard.html"
+                            class="w-full bg-gradient-to-r from-orange-600 to-cyan-600 text-white text-center px-6 py-3 rounded-lg font-semibold shadow-lg">
+                            <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
+                        </a>
                     </div>
                 </div>
             </div>
@@ -100,17 +138,20 @@
             <div class="container mx-auto px-4">
                 <div class="text-center max-w-4xl mx-auto">
                     <h1 class="text-5xl lg:text-6xl font-bold font-['Rajdhani'] mb-6">
-                        3D Printing <span class="bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent">Gallery</span>
+                        3D Printing <span
+                            class="bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent">Gallery</span>
                     </h1>
                     <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                        Explore our portfolio of amazing 3D printed projects. From rapid prototypes to functional parts 
+                        Explore our portfolio of amazing 3D printed projects. From rapid prototypes to functional parts
                         and artistic creations, see what's possible with our advanced printing technologies.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#featured" class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
+                        <a href="#featured"
+                            class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
                             <i class="fas fa-star mr-2"></i>Featured Projects
                         </a>
-                        <a href="#filter" class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-orange-600 hover:text-orange-600 transition-all">
+                        <a href="#filter"
+                            class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-orange-600 hover:text-orange-600 transition-all">
                             <i class="fas fa-filter mr-2"></i>Browse Categories
                         </a>
                     </div>
@@ -121,29 +162,42 @@
         <!-- Filter Section -->
         <section id="filter" class="py-12 bg-white border-b border-gray-200">
             <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center justify-between gap-4">
-                    <div class="flex flex-wrap gap-3">
-                        <button class="filter-btn active px-4 py-2 rounded-full bg-orange-600 text-white font-medium transition-all" data-filter="all">
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-8">
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <button
+                            class="filter-btn active px-6 py-2 rounded-full bg-orange-600 text-white font-medium shadow-md transition-all whitespace-nowrap"
+                            data-filter="all">
                             All Projects
                         </button>
-                        <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-gray-300 transition-all" data-filter="prototypes">
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-all whitespace-nowrap"
+                            data-filter="prototypes">
                             Prototypes
                         </button>
-                        <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-gray-300 transition-all" data-filter="functional">
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-all whitespace-nowrap"
+                            data-filter="functional">
                             Functional Parts
                         </button>
-                        <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-gray-300 transition-all" data-filter="artistic">
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-all whitespace-nowrap"
+                            data-filter="artistic">
                             Artistic
                         </button>
-                        <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-gray-300 transition-all" data-filter="industrial">
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-all whitespace-nowrap"
+                            data-filter="industrial">
                             Industrial
                         </button>
                     </div>
+                    <div class="w-px h-8 bg-gray-200 hidden lg:block"></div>
                     <div class="flex items-center gap-3">
-                        <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
-                            <option>Sort by: Latest</option>
-                            <option>Sort by: Popular</option>
-                            <option>Sort by: Technology</option>
+                        <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sort by:</span>
+                        <select
+                            class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white text-gray-700 outline-none transition-all cursor-pointer">
+                            <option>Latest</option>
+                            <option>Popular</option>
+                            <option>Technology</option>
                         </select>
                     </div>
                 </div>
@@ -156,9 +210,13 @@
                 <div id="galleryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     <!-- Gallery Item 1 -->
                     <div class="gallery-item group cursor-pointer" data-category="prototypes">
-                        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                            <img src="https://images.unsplash.com/photo-1603481546647-34f6e4c8d9d9?w=400" alt="3D Printed Prototype" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div
+                            class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400"
+                                alt="3D Printed Prototype"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
                                     <h3 class="font-bold text-lg mb-1">Automotive Prototype</h3>
                                     <p class="text-sm opacity-90">FDM printed car part prototype</p>
@@ -173,9 +231,13 @@
 
                     <!-- Gallery Item 2 -->
                     <div class="gallery-item group cursor-pointer" data-category="functional">
-                        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400" alt="Functional Part" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div
+                            class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400"
+                                alt="Functional Part"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
                                     <h3 class="font-bold text-lg mb-1">Mechanical Gear</h3>
                                     <p class="text-sm opacity-90">High-precision functional gear assembly</p>
@@ -190,9 +252,13 @@
 
                     <!-- Gallery Item 3 -->
                     <div class="gallery-item group cursor-pointer" data-category="artistic">
-                        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                            <img src="https://picsum.photos/seed/artistic1/400/300" alt="Artistic Sculpture" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div
+                            class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                            <img src="https://d11kvfv4kxw5s4.cloudfront.net/wp-content/uploads/sites/7/2022/02/08113345/what-is-abstract-sculpture.jpg"
+                                alt="Artistic Sculpture"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
                                     <h3 class="font-bold text-lg mb-1">Abstract Sculpture</h3>
                                     <p class="text-sm opacity-90">Complex geometric art piece</p>
@@ -207,9 +273,13 @@
 
                     <!-- Gallery Item 4 -->
                     <div class="gallery-item group cursor-pointer" data-category="industrial">
-                        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                            <img src="https://picsum.photos/seed/industrial1/400/300" alt="Industrial Component" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div
+                            class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&auto=format&fit=crop"
+                                alt="Industrial Component"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
                                     <h3 class="font-bold text-lg mb-1">Industrial Bracket</h3>
                                     <p class="text-sm opacity-90">Metal bracket for aerospace application</p>
@@ -224,9 +294,13 @@
 
                     <!-- Gallery Item 5 -->
                     <div class="gallery-item group cursor-pointer" data-category="prototypes">
-                        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                            <img src="https://picsum.photos/seed/prototype2/400/300" alt="Medical Device" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div
+                            class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                            <img src="https://camoinassociates.com/wp-content/uploads/2024/02/Medical-Equipment.jpg"
+                                alt="Medical Device"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
                                     <h3 class="font-bold text-lg mb-1">Medical Device</h3>
                                     <p class="text-sm opacity-90">Surgical instrument prototype</p>
@@ -241,9 +315,13 @@
 
                     <!-- Gallery Item 6 -->
                     <div class="gallery-item group cursor-pointer" data-category="functional">
-                        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                            <img src="https://picsum.photos/seed/functional2/400/300" alt="Robotics Part" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div
+                            class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                            <img src="https://www.universal-robots.com/media/1826113/website-version_umbraco-10_2022_motek_tradeshow_cobot_demo_expert_talk-05.jpg?width=1000"
+                                alt="Robotics Part"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
                                     <h3 class="font-bold text-lg mb-1">Robotics Arm</h3>
                                     <p class="text-sm opacity-90">Custom robotic arm component</p>
@@ -258,9 +336,13 @@
 
                     <!-- Gallery Item 7 -->
                     <div class="gallery-item group cursor-pointer" data-category="artistic">
-                        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                            <img src="https://picsum.photos/seed/artistic2/400/300" alt="Jewelry Design" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div
+                            class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&auto=format&fit=crop"
+                                alt="Jewelry Design"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
                                     <h3 class="font-bold text-lg mb-1">Custom Jewelry</h3>
                                     <p class="text-sm opacity-90">Intricate ring design prototype</p>
@@ -275,9 +357,13 @@
 
                     <!-- Gallery Item 8 -->
                     <div class="gallery-item group cursor-pointer" data-category="industrial">
-                        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                            <img src="https://picsum.photos/seed/industrial2/400/300" alt="Heat Exchanger" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div
+                            class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                            <img src="https://t3.ftcdn.net/jpg/05/48/51/48/360_F_548514843_uDJNb6PrBcTSTjztUm75bhQY9TCzYQPs.jpghttps://github.com/anbu37377-afk/3D-Printing_website-"
+                                alt="Heat Exchanger"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
                                     <h3 class="font-bold text-lg mb-1">Heat Exchanger</h3>
                                     <p class="text-sm opacity-90">Complex internal channel design</p>
@@ -293,7 +379,8 @@
 
                 <!-- Load More Button -->
                 <div class="text-center mt-12">
-                    <button class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all">
+                    <button
+                        class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all">
                         <i class="fas fa-plus mr-2"></i>Load More Projects
                     </button>
                 </div>
@@ -310,27 +397,29 @@
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-8">
+                <div class="grid md:grid-cols-2 gap-8 items-stretch">
                     <!-- Featured Project 1 -->
-                    <div class="bg-gradient-to-br from-orange-50 to-white rounded-2xl shadow-xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1603481546647-34f6e4c8d9d9?w=600" alt="Featured Project" class="w-full h-64 object-cover">
-                        <div class="p-8">
+                    <div class="bg-gradient-to-br from-orange-50 to-white rounded-2xl shadow-xl overflow-hidden h-full flex flex-col">
+                        <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=600&auto=format&fit=crop"
+                            alt="Featured Project: Drone Frame" class="w-full h-64 object-cover">
+                        <div class="p-8 flex flex-col flex-1">
                             <div class="flex items-center mb-4">
-                                <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold mr-3">Featured</span>
+                                <span
+                                    class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold mr-3">Featured</span>
                                 <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">FDM</span>
                             </div>
                             <h3 class="text-2xl font-bold mb-3">Revolutionary Drone Frame</h3>
                             <p class="text-gray-600 mb-6">
-                                Lightweight yet strong drone frame designed for maximum flight time and durability. 
+                                Lightweight yet strong drone frame designed for maximum flight time and durability.
                                 Created using advanced FDM technology with carbon fiber reinforced PLA.
                             </p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                            <div class="flex items-center justify-between mt-auto gap-4">
+                                <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
                                     <span><i class="fas fa-cube mr-1"></i>PLA-CF</span>
                                     <span><i class="fas fa-clock mr-1"></i>48hr print</span>
                                     <span><i class="fas fa-ruler mr-1"></i>250mm</span>
                                 </div>
-                                <button class="text-orange-600 hover:text-orange-700 font-semibold">
+                                <button class="text-orange-600 hover:text-orange-700 font-semibold whitespace-nowrap">
                                     View Details <i class="fas fa-arrow-right ml-1"></i>
                                 </button>
                             </div>
@@ -338,25 +427,27 @@
                     </div>
 
                     <!-- Featured Project 2 -->
-                    <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl shadow-xl overflow-hidden">
-                        <img src="https://picsum.photos/seed/featured2/600/400" alt="Featured Project" class="w-full h-64 object-cover">
-                        <div class="p-8">
+                    <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl shadow-xl overflow-hidden h-full flex flex-col">
+                        <img src="https://images.unsplash.com/photo-1614851099175-e5b30eb6f696?w=800&auto=format&fit=crop"
+                            alt="Featured Project: Architectural Model" class="w-full h-64 object-cover">
+                        <div class="p-8 flex flex-col flex-1">
                             <div class="flex items-center mb-4">
-                                <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold mr-3">Featured</span>
+                                <span
+                                    class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold mr-3">Featured</span>
                                 <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">SLA</span>
                             </div>
                             <h3 class="text-2xl font-bold mb-3">Architectural Model</h3>
                             <p class="text-gray-600 mb-6">
-                                Highly detailed architectural scale model with fine textures and intricate details. 
+                                Highly detailed architectural scale model with fine textures and intricate details.
                                 Perfect for client presentations and design visualization.
                             </p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                            <div class="flex items-center justify-between mt-auto gap-4">
+                                <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
                                     <span><i class="fas fa-droplet mr-1"></i>Resin</span>
                                     <span><i class="fas fa-clock mr-1"></i>72hr print</span>
                                     <span><i class="fas fa-ruler mr-1"></i>1:100 scale</span>
                                 </div>
-                                <button class="text-orange-600 hover:text-orange-700 font-semibold">
+                                <button class="text-orange-600 hover:text-orange-700 font-semibold whitespace-nowrap">
                                     View Details <i class="fas fa-arrow-right ml-1"></i>
                                 </button>
                             </div>
@@ -371,18 +462,22 @@
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-4xl font-bold font-['Rajdhani'] text-white mb-6">Showcase Your Project</h2>
                 <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                    Have an amazing 3D printing project? Share it with our community and inspire others with your creativity.
+                    Have an amazing 3D printing project? Share it with our community and inspire others with your
+                    creativity.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="dashboard.html" class="bg-white text-orange-600 px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
+                    <a href="dashboard.html"
+                        class="bg-white text-orange-600 px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
                         <i class="fas fa-upload mr-2"></i>Submit Your Project
                     </a>
-                    <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-orange-600 transition-all">
+                    <a href="contact.html"
+                        class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-orange-600 transition-all">
                         <i class="fas fa-envelope mr-2"></i>Get Inspired
                     </a>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Footer -->
@@ -391,7 +486,8 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center">
                             <i class="fas fa-cube text-white text-xl"></i>
                         </div>
                         <span class="text-2xl font-bold">3D Print Pro</span>
@@ -400,42 +496,53 @@
                         Professional 3D printing services with cutting-edge technology and exceptional quality.
                     </p>
                 </div>
-                
+
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
-                        <li><a href="materials.html" class="text-gray-400 hover:text-white transition-colors">Materials</a></li>
-                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
-                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="materials.html"
+                                class="text-gray-400 hover:text-white transition-colors">Materials</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                        </li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-colors">Pricing</a>
+                        </li>
                         <li><a href="faq.html" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Support</h3>
                     <ul class="space-y-2">
-                        <li><a href="how-it-works.html" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">File Guidelines</a></li>
+                        <li><a href="how-it-works.html" class="text-gray-400 hover:text-white transition-colors">How It
+                                Works</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact
+                                Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">File Guidelines</a>
+                        </li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping Info</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Returns</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Connect</h3>
                     <div class="flex space-x-4 mb-6">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -450,10 +557,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2026 3D Print Pro. All rights reserved. | 
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | 
+                <p>&copy; 2026 3D Print Pro. All rights reserved. |
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> |
                     <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
                 </p>
             </div>
@@ -464,24 +571,24 @@
     <script src="js/main.js"></script>
     <script>
         // Gallery Filter Functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const galleryItems = document.querySelectorAll('.gallery-item');
 
             filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     // Update active button
                     filterButtons.forEach(btn => {
                         btn.classList.remove('active', 'bg-orange-600', 'text-white');
                         btn.classList.add('bg-gray-200', 'text-gray-700');
                     });
-                    
+
                     this.classList.remove('bg-gray-200', 'text-gray-700');
                     this.classList.add('active', 'bg-orange-600', 'text-white');
 
                     // Filter gallery items
                     const filter = this.getAttribute('data-filter');
-                    
+
                     galleryItems.forEach(item => {
                         if (filter === 'all' || item.getAttribute('data-category') === filter) {
                             item.style.display = 'block';
@@ -498,7 +605,7 @@
 
             // Gallery item click handler
             galleryItems.forEach(item => {
-                item.addEventListener('click', function() {
+                item.addEventListener('click', function () {
                     // Here you could open a modal with larger image and details
                     console.log('Gallery item clicked');
                 });
@@ -506,4 +613,5 @@
         });
     </script>
 </body>
+
 </html>

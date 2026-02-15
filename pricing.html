@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing | 3D Print Pro</title>
-    <meta name="description" content="Transparent pricing for 3D printing services. Instant quote calculator, bulk discounts, and competitive rates for all materials and technologies.">
-    
+    <meta name="description"
+        content="Transparent pricing for 3D printing services. Instant quote calculator, bulk discounts, and competitive rates for all materials and technologies.">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -27,66 +31,100 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
+
 <body class="bg-white text-gray-900 transition-colors duration-300">
     <!-- Header -->
-    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 transition-colors duration-300">
+    <header
+        class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 transition-colors duration-300">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center space-x-2 group">
-                    <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
                         <i class="fas fa-cube text-white text-xl"></i>
                     </div>
-                    <span class="text-2xl font-bold bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent">3D Print Pro</span>
+                    <span
+                        class="text-xl md:text-2xl font-bold bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent whitespace-nowrap">3D
+                        Print Pro</span>
                 </a>
-                
+
                 <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home</a>
-                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home 2</a>
-                    <a href="services.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
-                    <a href="materials.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
-                    <a href="gallery.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Gallery</a>
-                    <a href="pricing.html" class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Pricing</a>
-                    <a href="contact.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
+                <div class="hidden xl:flex items-center space-x-4 xl:space-x-8">
+                    <a href="index.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home</a>
+                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home
+                        2</a>
+                    <a href="services.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
+                    <a href="materials.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
+                    <a href="gallery.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Gallery</a>
+                    <a href="pricing.html"
+                        class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Pricing</a>
+                    <a href="contact.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
                 </div>
-                
+
                 <!-- Right Side Actions -->
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2 md:space-x-4">
                     <!-- Dark Mode Toggle -->
                     <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
                         <i class="fas fa-moon text-gray-600"></i>
                     </button>
-                    
+
                     <!-- Auth Links -->
-                    <div class="hidden md:flex items-center space-x-3">
-                        <a href="register.html" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">Sign Up</a>
+                    <div class="hidden xl:flex items-center space-x-4">
+                        <a href="login.html"
+                            class="px-3 xl:px-4 py-2 rounded-lg font-medium text-gray-700 hover:text-orange-600 border border-gray-300 hover:border-orange-600 transition-all text-sm xl:text-base">Login</a>
+                        <a href="register.html"
+                            class="bg-orange-600 text-white px-3 xl:px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm xl:text-base">Sign
+                            Up</a>
                     </div>
-                    
+
                     <!-- CTA Button -->
-                    <a href="dashboard.html" class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all">
+                    <a href="dashboard.html"
+                        class="hidden xl:flex bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-4 xl:px-6 py-2 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all text-sm xl:text-base">
                         <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
                     </a>
-                    
+
                     <!-- Mobile Menu Toggle -->
-                    <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <button id="mobileMenuToggle" class="xl:hidden p-2 rounded-lg hover:bg-gray-100">
                         <i class="fas fa-bars text-gray-600"></i>
                     </button>
                 </div>
             </div>
-            
+
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+            <div id="mobileMenu" class="hidden xl:hidden mt-4 pb-4 border-t border-gray-200">
                 <div class="flex flex-col space-y-3 mt-4">
-                    <a href="index.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home</a>
-                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home 2</a>
-                    <a href="services.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
-                    <a href="materials.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
-                    <a href="gallery.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Gallery</a>
-                    <a href="pricing.html" class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Pricing</a>
-                    <a href="contact.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
-                    <div class="flex items-center space-x-3 pt-3 border-t border-gray-200">
-                        <a href="register.html" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">Sign Up</a>
+                    <a href="index.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home</a>
+                    <a href="index2.html" class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Home
+                        2</a>
+                    <a href="services.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Services</a>
+                    <a href="materials.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Materials</a>
+                    <a href="gallery.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Gallery</a>
+                    <a href="pricing.html"
+                        class="font-medium text-orange-600 hover:text-orange-700 transition-colors">Pricing</a>
+                    <a href="contact.html"
+                        class="font-medium text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
+                    <div class="flex flex-col space-y-3 pt-3 border-t border-gray-200">
+                        <div class="flex items-center space-x-4">
+                            <a href="login.html"
+                                class="px-4 py-2 rounded-lg font-medium text-gray-700 hover:text-orange-600 border border-gray-300 hover:border-orange-600 transition-all">Login</a>
+                            <a href="register.html"
+                                class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">Sign
+                                Up</a>
+                        </div>
+                        <a href="dashboard.html"
+                            class="w-full bg-gradient-to-r from-orange-600 to-cyan-600 text-white text-center px-6 py-3 rounded-lg font-semibold shadow-lg">
+                            <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
+                        </a>
                     </div>
                 </div>
             </div>
@@ -100,17 +138,20 @@
             <div class="container mx-auto px-4">
                 <div class="text-center max-w-4xl mx-auto">
                     <h1 class="text-5xl lg:text-6xl font-bold font-['Rajdhani'] mb-6">
-                        Transparent <span class="bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent">Pricing</span>
+                        Transparent <span
+                            class="bg-gradient-to-r from-orange-600 to-cyan-600 bg-clip-text text-transparent">Pricing</span>
                     </h1>
                     <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                        No hidden fees, just clear and competitive pricing. Get instant quotes, 
+                        No hidden fees, just clear and competitive pricing. Get instant quotes,
                         bulk discounts, and fast turnaround times for all your 3D printing needs.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#calculator" class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
+                        <a href="#calculator"
+                            class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
                             <i class="fas fa-calculator mr-2"></i>Get Instant Quote
                         </a>
-                        <a href="#materials" class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-orange-600 hover:text-orange-600 transition-all">
+                        <a href="#materials"
+                            class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-orange-600 hover:text-orange-600 transition-all">
                             <i class="fas fa-list mr-2"></i>View Material Prices
                         </a>
                     </div>
@@ -124,14 +165,16 @@
                 <div class="max-w-4xl mx-auto">
                     <div class="text-center mb-12">
                         <h2 class="text-4xl font-bold font-['Rajdhani'] mb-4">Instant Quote Calculator</h2>
-                        <p class="text-xl text-gray-600">Get an accurate price estimate for your 3D printing project in seconds</p>
+                        <p class="text-xl text-gray-600">Get an accurate price estimate for your 3D printing project in
+                            seconds</p>
                     </div>
-                    
+
                     <div class="bg-gradient-to-br from-orange-50 to-cyan-50 rounded-2xl shadow-xl p-8">
                         <div class="grid md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Material Type</label>
-                                <select id="quoteMaterial" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                <select id="quoteMaterial"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
                                     <option value="pla">PLA - $0.10/cm³</option>
                                     <option value="abs">ABS - $0.15/cm³</option>
                                     <option value="petg">PETG - $0.18/cm³</option>
@@ -140,34 +183,38 @@
                                     <option value="metal">Metal - $5.00/cm³</option>
                                 </select>
                             </div>
-                            
+
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Volume (cm³)</label>
-                                <input type="number" id="quoteVolume" placeholder="Enter volume" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                <input type="number" id="quoteVolume" placeholder="Enter volume"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
                             </div>
-                            
+
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Quantity</label>
-                                <input type="number" id="quoteQuantity" value="1" min="1" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                <input type="number" id="quoteQuantity" value="1" min="1"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
                             </div>
-                            
+
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Print Quality</label>
-                                <select id="quoteQuality" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                <select id="quoteQuality"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
                                     <option value="standard">Standard (0.2mm)</option>
                                     <option value="high">High (0.1mm)</option>
                                     <option value="ultra">Ultra (0.05mm)</option>
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="bg-white rounded-xl p-6">
                             <div class="flex justify-between items-center mb-4">
                                 <div>
                                     <div class="text-sm text-gray-600">Total Price</div>
                                     <div class="text-4xl font-bold text-orange-600" id="totalPrice">$0.00</div>
                                 </div>
-                                <button onclick="calculateQuote()" class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all">
+                                <button onclick="calculateQuote()"
+                                    class="bg-gradient-to-r from-orange-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all">
                                     <i class="fas fa-calculator mr-2"></i>Calculate Quote
                                 </button>
                             </div>
@@ -186,38 +233,38 @@
                         Competitive pricing for all our materials. Prices are per cubic centimeter (cm³)
                     </p>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="bg-white rounded-xl p-6 shadow-lg">
                         <div class="text-3xl font-bold text-orange-600 mb-4">$0.10/cm³</div>
                         <h3 class="text-xl font-bold mb-2">PLA</h3>
                         <p class="text-gray-600 text-sm mb-4">Eco-friendly bioplastic, easy to print</p>
                     </div>
-                    
+
                     <div class="bg-white rounded-xl p-6 shadow-lg">
                         <div class="text-3xl font-bold text-orange-600 mb-4">$0.15/cm³</div>
                         <h3 class="text-xl font-bold mb-2">ABS</h3>
                         <p class="text-gray-600 text-sm mb-4">Durable and temperature resistant</p>
                     </div>
-                    
+
                     <div class="bg-white rounded-xl p-6 shadow-lg">
                         <div class="text-3xl font-bold text-orange-600 mb-4">$0.25/cm³</div>
                         <h3 class="text-xl font-bold mb-2">Resin</h3>
                         <p class="text-gray-600 text-sm mb-4">High detail and smooth finish</p>
                     </div>
-                    
+
                     <div class="bg-white rounded-xl p-6 shadow-lg">
                         <div class="text-3xl font-bold text-orange-600 mb-4">$0.20/cm³</div>
                         <h3 class="text-xl font-bold mb-2">Nylon</h3>
                         <p class="text-gray-600 text-sm mb-4">Strong and flexible engineering material</p>
                     </div>
-                    
+
                     <div class="bg-white rounded-xl p-6 shadow-lg">
                         <div class="text-3xl font-bold text-orange-600 mb-4">$0.18/cm³</div>
                         <h3 class="text-xl font-bold mb-2">PETG</h3>
                         <p class="text-gray-600 text-sm mb-4">Food safe and chemical resistant</p>
                     </div>
-                    
+
                     <div class="bg-white rounded-xl p-6 shadow-lg">
                         <div class="text-3xl font-bold text-orange-600 mb-4">$5.00/cm³</div>
                         <h3 class="text-xl font-bold mb-2">Metal</h3>
@@ -235,10 +282,12 @@
                     Upload your design files now and get instant quotes. No hidden fees, just transparent pricing.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="dashboard.html" class="bg-white text-orange-600 px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
+                    <a href="dashboard.html"
+                        class="bg-white text-orange-600 px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
                         <i class="fas fa-upload mr-2"></i>Upload & Get Quote
                     </a>
-                    <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-orange-600 transition-all">
+                    <a href="contact.html"
+                        class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-orange-600 transition-all">
                         <i class="fas fa-phone mr-2"></i>Contact Sales Team
                     </a>
                 </div>
@@ -252,7 +301,8 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center">
                             <i class="fas fa-cube text-white text-xl"></i>
                         </div>
                         <span class="text-2xl font-bold">3D Print Pro</span>
@@ -261,42 +311,53 @@
                         Professional 3D printing services with cutting-edge technology and exceptional quality.
                     </p>
                 </div>
-                
+
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
-                        <li><a href="materials.html" class="text-gray-400 hover:text-white transition-colors">Materials</a></li>
-                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
-                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="materials.html"
+                                class="text-gray-400 hover:text-white transition-colors">Materials</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                        </li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-colors">Pricing</a>
+                        </li>
                         <li><a href="faq.html" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Support</h3>
                     <ul class="space-y-2">
-                        <li><a href="how-it-works.html" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">File Guidelines</a></li>
+                        <li><a href="how-it-works.html" class="text-gray-400 hover:text-white transition-colors">How It
+                                Works</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact
+                                Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">File Guidelines</a>
+                        </li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping Info</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Returns</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Connect</h3>
                     <div class="flex space-x-4 mb-6">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -311,10 +372,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2026 3D Print Pro. All rights reserved. | 
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | 
+                <p>&copy; 2026 3D Print Pro. All rights reserved. |
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> |
                     <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
                 </p>
             </div>
@@ -329,7 +390,7 @@
             const volume = parseFloat(document.getElementById('quoteVolume').value) || 0;
             const quantity = parseInt(document.getElementById('quoteQuantity').value) || 1;
             const quality = document.getElementById('quoteQuality').value;
-            
+
             const prices = {
                 'pla': 0.10,
                 'abs': 0.15,
@@ -338,19 +399,19 @@
                 'nylon': 0.20,
                 'metal': 5.00
             };
-            
+
             const qualityMultipliers = {
                 'standard': 1.0,
                 'high': 1.3,
                 'ultra': 1.6
             };
-            
+
             const basePrice = prices[material] * volume * quantity;
             const finalPrice = basePrice * qualityMultipliers[quality];
-            
+
             document.getElementById('totalPrice').textContent = `$${finalPrice.toFixed(2)}`;
         }
-        
+
         // Auto-calculate on input change
         document.querySelectorAll('#quoteMaterial, #quoteVolume, #quoteQuantity, #quoteQuality').forEach(element => {
             element.addEventListener('change', calculateQuote);
@@ -358,4 +419,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -4,10 +4,10 @@ class Dashboard {
     constructor() {
         this.currentSection = 'overview';
         this.charts = {};
-        
+
         this.init();
     }
-    
+
     init() {
         this.setupNavigation();
         this.initCharts();
@@ -15,33 +15,52 @@ class Dashboard {
         this.setupNotifications();
         this.loadDashboardData();
     }
-    
+
     setupNavigation() {
         // Sidebar navigation
         const sidebarLinks = document.querySelectorAll('.sidebar-item');
         sidebarLinks.forEach(link => {
             link.addEventListener('click', (e) => {
-                e.preventDefault();
                 const targetId = link.getAttribute('href').substring(1);
                 this.showSection(targetId);
-                
+
                 // Update active state
                 sidebarLinks.forEach(l => l.classList.remove('active'));
                 link.classList.add('active');
+
+                // Close sidebar on mobile after clicking
+                if (window.innerWidth < 1024) {
+                    this.toggleSidebar();
+                }
             });
         });
-        
+
         // Mobile sidebar toggle
         const sidebarToggle = document.getElementById('sidebarToggle');
         const sidebar = document.querySelector('.sidebar');
-        
+        const overlay = document.getElementById('sidebarOverlay');
+
         if (sidebarToggle && sidebar) {
-            sidebarToggle.addEventListener('click', () => {
+            this.toggleSidebar = () => {
                 sidebar.classList.toggle('active');
-            });
+                if (overlay) {
+                    overlay.classList.toggle('hidden');
+                }
+
+                // Toggle icon
+                const icon = sidebarToggle.querySelector('i');
+                if (icon) {
+                    icon.className = sidebar.classList.contains('active') ? 'fas fa-times text-gray-600' : 'fas fa-bars text-gray-600';
+                }
+            };
+
+            sidebarToggle.addEventListener('click', () => this.toggleSidebar());
+            if (overlay) {
+                overlay.addEventListener('click', () => this.toggleSidebar());
+            }
         }
     }
-    
+
     showSection(sectionId) {
         // Hide all sections
         const sections = ['overview', 'upload', 'viewer', 'jobs'];
@@ -51,21 +70,21 @@ class Dashboard {
                 section.classList.add('hidden');
             }
         });
-        
+
         // Show target section
         const targetSection = document.getElementById(sectionId);
         if (targetSection) {
             targetSection.classList.remove('hidden');
         }
-        
+
         this.currentSection = sectionId;
-        
+
         // Update charts when showing overview
         if (sectionId === 'overview') {
             this.updateCharts();
         }
     }
-    
+
     initCharts() {
         // Monthly Spending Chart
         const spendingCtx = document.getElementById('spendingChart');
@@ -86,25 +105,57 @@ class Dashboard {
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
+                    layout: {
+                        padding: {
+                            top: 10,
+                            bottom: 10,
+                            left: 0,
+                            right: 15
+                        }
+                    },
                     plugins: {
                         legend: {
                             display: false
+                        },
+                        tooltip: {
+                            backgroundColor: '#111827',
+                            titleFont: { size: 14, weight: 'bold' },
+                            bodyFont: { size: 13 },
+                            padding: 12,
+                            cornerRadius: 8,
+                            displayColors: false
                         }
                     },
                     scales: {
                         y: {
                             beginAtZero: true,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)',
+                                drawBorder: false
+                            },
                             ticks: {
-                                callback: function(value) {
+                                font: { size: 11 },
+                                color: '#6b7280',
+                                callback: function (value) {
                                     return '$' + value;
                                 }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            },
+                            ticks: {
+                                font: { size: 11 },
+                                color: '#6b7280'
                             }
                         }
                     }
                 }
             });
         }
-        
+
         // Material Distribution Chart
         const materialCtx = document.getElementById('materialChart');
         if (materialCtx) {
@@ -128,35 +179,49 @@ class Dashboard {
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
+                    cutout: '70%',
+                    layout: {
+                        padding: 20
+                    },
                     plugins: {
                         legend: {
-                            position: 'bottom'
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 20,
+                                font: { size: 12 }
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: '#111827',
+                            padding: 12,
+                            cornerRadius: 8
                         }
                     }
                 }
             });
         }
     }
-    
+
     updateCharts() {
         // Simulate real-time data updates
         if (this.charts.spending) {
-            const newData = this.charts.spending.data.datasets[0].data.map(val => 
+            const newData = this.charts.spending.data.datasets[0].data.map(val =>
                 Math.max(50, val + (Math.random() - 0.5) * 50)
             );
             this.charts.spending.data.datasets[0].data = newData;
             this.charts.spending.update();
         }
-        
+
         if (this.charts.material) {
-            const newData = this.charts.material.data.datasets[0].data.map(val => 
+            const newData = this.charts.material.data.datasets[0].data.map(val =>
                 Math.max(5, val + (Math.random() - 0.5) * 10)
             );
             this.charts.material.data.datasets[0].data = newData;
             this.charts.material.update();
         }
     }
-    
+
     setupSearch() {
         const searchInput = document.querySelector('input[placeholder*="Search jobs"]');
         if (searchInput) {
@@ -165,16 +230,16 @@ class Dashboard {
             }, 300));
         }
     }
-    
+
     searchJobs(query) {
         const rows = document.querySelectorAll('#jobs table tbody tr');
-        
+
         rows.forEach(row => {
             const jobId = row.querySelector('td:first-child')?.textContent.toLowerCase() || '';
             const fileName = row.querySelector('td:nth-child(2)')?.textContent.toLowerCase() || '';
-            
+
             const matches = jobId.includes(query.toLowerCase()) || fileName.includes(query.toLowerCase());
-            
+
             if (matches || query === '') {
                 row.style.display = '';
             } else {
@@ -182,7 +247,7 @@ class Dashboard {
             }
         });
     }
-    
+
     setupNotifications() {
         const notificationButton = document.querySelector('[class*="fa-bell"]').parentElement;
         if (notificationButton) {
@@ -191,14 +256,14 @@ class Dashboard {
             });
         }
     }
-    
+
     showNotifications() {
         const notifications = [
             { type: 'success', message: 'Job #001 completed successfully', time: '2 hours ago' },
             { type: 'info', message: 'New material available: Carbon Fiber', time: '5 hours ago' },
             { type: 'warning', message: 'Job #002 requires attention', time: '1 day ago' }
         ];
-        
+
         // Create notification dropdown
         const dropdown = document.createElement('div');
         dropdown.className = 'absolute top-12 right-4 w-80 bg-white rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto';
@@ -210,11 +275,10 @@ class Dashboard {
                 ${notifications.map(notif => `
                     <div class="p-4 border-b border-gray-100 hover:bg-gray-50 cursor-pointer">
                         <div class="flex items-start space-x-3">
-                            <div class="w-2 h-2 rounded-full mt-2 ${
-                                notif.type === 'success' ? 'bg-green-500' :
-                                notif.type === 'warning' ? 'bg-yellow-500' :
-                                'bg-blue-500'
-                            }"></div>
+                            <div class="w-2 h-2 rounded-full mt-2 ${notif.type === 'success' ? 'bg-green-500' :
+                notif.type === 'warning' ? 'bg-yellow-500' :
+                    'bg-blue-500'
+            }"></div>
                             <div class="flex-1">
                                 <p class="text-sm">${notif.message}</p>
                                 <p class="text-xs text-gray-500 mt-1">${notif.time}</p>
@@ -227,9 +291,9 @@ class Dashboard {
                 <button class="text-sm text-orange-600 hover:text-orange-700">Mark all as read</button>
             </div>
         `;
-        
+
         document.body.appendChild(dropdown);
-        
+
         // Close when clicking outside
         setTimeout(() => {
             document.addEventListener('click', function closeDropdown(e) {
@@ -240,18 +304,18 @@ class Dashboard {
             });
         }, 100);
     }
-    
+
     loadDashboardData() {
         // Simulate loading dashboard data
         this.updateStats();
         this.loadRecentJobs();
-        
+
         // Set up periodic updates
         setInterval(() => {
             this.updateStats();
         }, 30000); // Update every 30 seconds
     }
-    
+
     updateStats() {
         // Update stats with simulated real-time data
         const stats = {
@@ -260,7 +324,7 @@ class Dashboard {
             completed: 21 + Math.floor(Math.random() * 5),
             totalSpent: 1247 + Math.floor(Math.random() * 200)
         };
-        
+
         // Update stat cards
         const statElements = {
             totalJobs: document.querySelector('.grid .text-2xl'),
@@ -268,7 +332,7 @@ class Dashboard {
             completed: document.querySelectorAll('.grid .text-2xl')[2],
             totalSpent: document.querySelectorAll('.grid .text-2xl')[3]
         };
-        
+
         Object.entries(stats).forEach(([key, value]) => {
             if (statElements[key]) {
                 if (key === 'totalSpent') {
@@ -279,7 +343,7 @@ class Dashboard {
             }
         });
     }
-    
+
     loadRecentJobs() {
         // Simulate loading recent jobs
         const recentJobs = [
@@ -287,7 +351,7 @@ class Dashboard {
             { id: '#005', name: 'enclosure_top.obj', status: 'uploaded', material: 'ABS', quantity: 1, price: 22.50 },
             { id: '#006', name: 'gear_set.step', status: 'processing', material: 'Resin', quantity: 2, price: 35.00 }
         ];
-        
+
         // Add to jobs table if it exists
         const tbody = document.querySelector('#jobs table tbody');
         if (tbody && tbody.children.length < 6) { // Only add if table is not too full
@@ -312,7 +376,7 @@ class Dashboard {
             });
         }
     }
-    
+
     exportData(format) {
         // Export dashboard data
         const data = {
@@ -325,14 +389,14 @@ class Dashboard {
             jobs: this.getJobsData(),
             exportDate: new Date().toISOString()
         };
-        
+
         if (format === 'csv') {
             this.exportToCSV(data.jobs);
         } else if (format === 'json') {
             this.exportToJSON(data);
         }
     }
-    
+
     getJobsData() {
         const rows = document.querySelectorAll('#jobs table tbody tr');
         return Array.from(rows).map(row => {
@@ -347,7 +411,7 @@ class Dashboard {
             };
         });
     }
-    
+
     exportToCSV(data) {
         const headers = ['Job ID', 'File Name', 'Status', 'Material', 'Quantity', 'Price'];
         const csvContent = [
@@ -361,15 +425,15 @@ class Dashboard {
                 job.price
             ].join(','))
         ].join('\n');
-        
+
         this.downloadFile(csvContent, 'jobs_export.csv', 'text/csv');
     }
-    
+
     exportToJSON(data) {
         const jsonContent = JSON.stringify(data, null, 2);
         this.downloadFile(jsonContent, 'dashboard_export.json', 'application/json');
     }
-    
+
     downloadFile(content, filename, contentType) {
         const blob = new Blob([content], { type: contentType });
         const url = URL.createObjectURL(blob);
@@ -388,7 +452,7 @@ let dashboard;
 
 document.addEventListener('DOMContentLoaded', () => {
     dashboard = new Dashboard();
-    
+
     // Add export buttons to dashboard
     const overviewSection = document.getElementById('overview');
     if (overviewSection) {

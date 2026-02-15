@@ -4,7 +4,7 @@
 function initDarkMode() {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const html = document.documentElement;
-    
+
     // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
@@ -14,12 +14,12 @@ function initDarkMode() {
         html.setAttribute('data-theme', 'dark');
         updateDarkModeIcon('dark');
     }
-    
+
     if (darkModeToggle) {
         darkModeToggle.addEventListener('click', () => {
             const currentTheme = html.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
+
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateDarkModeIcon(newTheme);
@@ -38,19 +38,19 @@ function updateDarkModeIcon(theme) {
 function initRTL() {
     const rtlToggle = document.getElementById('rtlToggle');
     const html = document.documentElement;
-    
+
     // Check for saved RTL preference
     const savedRTL = localStorage.getItem('rtl');
     if (savedRTL === 'true') {
         html.setAttribute('dir', 'rtl');
         updateRTLIcon(true);
     }
-    
+
     if (rtlToggle) {
         rtlToggle.addEventListener('click', () => {
             const currentRTL = html.getAttribute('dir') === 'rtl';
             const newRTL = !currentRTL;
-            
+
             html.setAttribute('dir', newRTL ? 'rtl' : 'ltr');
             localStorage.setItem('rtl', newRTL);
             updateRTLIcon(newRTL);
@@ -69,17 +69,17 @@ function updateRTLIcon(isRTL) {
 function initMobileMenu() {
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
-    
+
     if (mobileMenuToggle && mobileMenu) {
         mobileMenuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-            
+
             const icon = mobileMenuToggle.querySelector('i');
             if (icon) {
                 icon.className = mobileMenu.classList.contains('hidden') ? 'fas fa-bars text-gray-600' : 'fas fa-times text-gray-600';
             }
         });
-        
+
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
@@ -93,22 +93,7 @@ function initMobileMenu() {
     }
 }
 
-// Sidebar Toggle for Dashboard
-function initSidebar() {
-    const sidebarToggle = document.getElementById('sidebarToggle');
-    const sidebar = document.querySelector('.sidebar');
-    
-    if (sidebarToggle && sidebar) {
-        sidebarToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-            
-            const icon = sidebarToggle.querySelector('i');
-            if (icon) {
-                icon.className = sidebar.classList.contains('active') ? 'fas fa-times text-gray-600' : 'fas fa-bars text-gray-600';
-            }
-        });
-    }
-}
+
 
 // Smooth Scrolling
 function initSmoothScroll() {
@@ -132,7 +117,7 @@ function initScrollAnimations() {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -140,7 +125,7 @@ function initScrollAnimations() {
             }
         });
     }, observerOptions);
-    
+
     // Observe elements for animation
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
         observer.observe(el);
@@ -151,10 +136,10 @@ function initScrollAnimations() {
 function validateForm(formId) {
     const form = document.getElementById(formId);
     if (!form) return false;
-    
+
     let isValid = true;
     const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
-    
+
     inputs.forEach(input => {
         if (!input.value.trim()) {
             showError(input, 'This field is required');
@@ -162,7 +147,7 @@ function validateForm(formId) {
         } else {
             clearError(input);
         }
-        
+
         // Email validation
         if (input.type === 'email' && input.value) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -172,26 +157,26 @@ function validateForm(formId) {
             }
         }
     });
-    
+
     return isValid;
 }
 
 function showError(input, message) {
     clearError(input);
-    
+
     input.classList.add('border-red-500');
-    
+
     const errorElement = document.createElement('span');
     errorElement.className = 'text-red-500 text-sm mt-1';
     errorElement.textContent = message;
     errorElement.id = input.id + '-error';
-    
+
     input.parentNode.appendChild(errorElement);
 }
 
 function clearError(input) {
     input.classList.remove('border-red-500');
-    
+
     const errorElement = document.getElementById(input.id + '-error');
     if (errorElement) {
         errorElement.remove();
@@ -201,30 +186,28 @@ function clearError(input) {
 // Notification System
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
-    notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg max-w-sm animate-slide-right ${
-        type === 'success' ? 'bg-green-500 text-white' :
-        type === 'error' ? 'bg-red-500 text-white' :
-        type === 'warning' ? 'bg-yellow-500 text-white' :
-        'bg-blue-500 text-white'
-    }`;
-    
+    notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg max-w-sm animate-slide-right ${type === 'success' ? 'bg-green-500 text-white' :
+            type === 'error' ? 'bg-red-500 text-white' :
+                type === 'warning' ? 'bg-yellow-500 text-white' :
+                    'bg-blue-500 text-white'
+        }`;
+
     notification.innerHTML = `
         <div class="flex items-center">
-            <i class="fas ${
-                type === 'success' ? 'fa-check-circle' :
-                type === 'error' ? 'fa-exclamation-circle' :
+            <i class="fas ${type === 'success' ? 'fa-check-circle' :
+            type === 'error' ? 'fa-exclamation-circle' :
                 type === 'warning' ? 'fa-exclamation-triangle' :
-                'fa-info-circle'
-            } mr-3"></i>
+                    'fa-info-circle'
+        } mr-3"></i>
             <span>${message}</span>
             <button class="ml-auto pl-3" onclick="this.parentElement.parentElement.remove()">
                 <i class="fas fa-times"></i>
             </button>
         </div>
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Auto-remove after 5 seconds
     setTimeout(() => {
         if (notification.parentNode) {
@@ -248,11 +231,11 @@ function setLoading(button, loading = true) {
 // File Upload Helper
 function formatFileSize(bytes) {
     if (bytes === 0) return '0 Bytes';
-    
+
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    
+
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
 }
 
@@ -309,7 +292,7 @@ function debounce(func, wait) {
 // Throttle Function
 function throttle(func, limit) {
     let inThrottle;
-    return function() {
+    return function () {
         const args = arguments;
         const context = this;
         if (!inThrottle) {
@@ -325,16 +308,16 @@ document.addEventListener('DOMContentLoaded', () => {
     initDarkMode();
     initRTL();
     initMobileMenu();
-    initSidebar();
+
     initSmoothScroll();
     initScrollAnimations();
-    
+
     // Add loading animation to page
     document.body.classList.add('animate-slide-up');
-    
+
     // Initialize tooltips if needed
     initTooltips();
-    
+
     // Initialize modals if needed
     initModals();
 });
@@ -342,21 +325,21 @@ document.addEventListener('DOMContentLoaded', () => {
 // Initialize tooltips
 function initTooltips() {
     const tooltipElements = document.querySelectorAll('[data-tooltip]');
-    
+
     tooltipElements.forEach(element => {
         element.addEventListener('mouseenter', (e) => {
             const tooltip = document.createElement('div');
             tooltip.className = 'absolute z-50 px-2 py-1 text-xs text-white bg-gray-800 rounded shadow-lg';
             tooltip.textContent = e.target.getAttribute('data-tooltip');
             tooltip.id = 'tooltip';
-            
+
             document.body.appendChild(tooltip);
-            
+
             const rect = e.target.getBoundingClientRect();
             tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
             tooltip.style.top = rect.top - tooltip.offsetHeight - 5 + 'px';
         });
-        
+
         element.addEventListener('mouseleave', () => {
             const tooltip = document.getElementById('tooltip');
             if (tooltip) {
@@ -370,12 +353,12 @@ function initTooltips() {
 function initModals() {
     const modalTriggers = document.querySelectorAll('[data-modal-target]');
     const modals = document.querySelectorAll('.modal');
-    
+
     modalTriggers.forEach(trigger => {
         trigger.addEventListener('click', () => {
             const targetId = trigger.getAttribute('data-modal-target');
             const modal = document.getElementById(targetId);
-            
+
             if (modal) {
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
@@ -383,10 +366,10 @@ function initModals() {
             }
         });
     });
-    
+
     modals.forEach(modal => {
         const closeButtons = modal.querySelectorAll('[data-modal-close]');
-        
+
         closeButtons.forEach(button => {
             button.addEventListener('click', () => {
                 modal.classList.add('hidden');
@@ -394,7 +377,7 @@ function initModals() {
                 document.body.style.overflow = 'auto';
             });
         });
-        
+
         // Close modal when clicking outside
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
